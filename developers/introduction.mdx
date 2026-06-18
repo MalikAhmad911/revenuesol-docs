@@ -1,0 +1,67 @@
+---
+title: "For Developers"
+description: "How to integrate with Revenue Sol — webhooks, embeddable widgets, and OAuth integrations."
+---
+
+This section is for developers and technical implementers working with Revenue Sol.
+
+<Warning>
+**Revenue Sol does not currently offer a public REST API with API keys.** There are no developer endpoints to query contacts, send messages, or create jobs programmatically. Integration happens through the three mechanisms below. If a public API is something you need, [contact us](https://www.revenuesol.com) — it's on the roadmap.
+</Warning>
+
+## Ways to integrate
+
+<CardGroup cols={2}>
+  <Card title="Webhooks (inbound)" icon="bolt" href="/developers/webhooks">
+    Revenue Sol **receives** signed webhooks from providers like Twilio, Stripe, RingCentral, Retell, Meta, and Square. These are configured automatically when you connect an integration.
+  </Card>
+  <Card title="Embeds & widgets" icon="code" href="/developers/embeds">
+    Drop the **review widget**, **web-chat widget**, **booking links**, and **payment links** onto any website. These use public, scoped keys/tokens — no secrets.
+  </Card>
+  <Card title="OAuth integrations" icon="plug" href="/integrations/twilio">
+    Connect third-party accounts (Twilio, Google, Meta, QuickBooks, RingCentral) via secure OAuth from the app's settings.
+  </Card>
+  <Card title="Mobile push" icon="bell" href="/guides/mobile-app">
+    The crew mobile app registers devices for push notifications via Firebase Cloud Messaging.
+  </Card>
+</CardGroup>
+
+## Authentication model
+
+<CardGroup cols={2}>
+  <Card title="App access" icon="user-lock">
+    The web and mobile apps authenticate users with **Clerk**. All in-app data access is scoped to your organization and enforced by row-level security in the database.
+  </Card>
+  <Card title="Public pages" icon="link">
+    Customer-facing pages (booking, pay, quote, intake) use **scoped, single-purpose tokens or public slugs** — not API keys. A payment token can only pay its own invoice; a booking slug only exposes that business's public booking page.
+  </Card>
+  <Card title="Webhooks" icon="shield-check">
+    Inbound webhooks are verified by **provider signatures** (HMAC) — never bearer tokens. Revenue Sol rejects any request whose signature doesn't validate.
+  </Card>
+  <Card title="Widgets" icon="key">
+    Embeddable widgets identify the business with a **public widget key** that exposes only non-sensitive, public data (e.g. top reviews).
+  </Card>
+</CardGroup>
+
+## Tech stack
+
+For context, Revenue Sol is built on:
+
+| Layer | Technology |
+| --- | --- |
+| Framework | Next.js (App Router), React |
+| Auth | Clerk (multi-tenant orgs) |
+| Database | Supabase — Postgres with row-level security |
+| Telephony | Twilio, RingCentral |
+| Voice AI | Retell |
+| Payments | Stripe, Square |
+| Accounting | QuickBooks Online |
+| Messaging | Meta (WhatsApp, Instagram), Email (IMAP/SMTP, Gmail/Outlook) |
+| Background jobs | Trigger.dev (+ cron fallbacks) |
+| Rate limiting | Upstash Redis |
+| Mobile | Capacitor (iOS/Android), Firebase Cloud Messaging |
+| Hosting | Vercel |
+
+<Info>
+Integration credentials you connect (Twilio, Google, QuickBooks, etc.) are stored **encrypted** and scoped to your organization.
+</Info>

@@ -1,0 +1,75 @@
+---
+title: "Payments & Invoices"
+description: "Send quotes and invoices, collect card payments with text-to-pay, and sync to QuickBooks."
+---
+
+Revenue Sol turns finished work into money in the bank. Send a quote, convert it to an invoice, and let customers pay by tapping a link in a text message. Payments are processed through Stripe or Square, and can sync to QuickBooks.
+
+{/* Screenshot placeholder: creating an invoice and a text-to-pay link */}
+
+## What you can do
+
+<CardGroup cols={2}>
+  <Card title="Quotes & estimates" icon="file-signature">
+    Send quotes customers can review, approve, and sign online.
+  </Card>
+  <Card title="Invoices" icon="file-invoice-dollar">
+    Turn approved quotes (or jobs) into invoices in a click.
+  </Card>
+  <Card title="Text-to-pay" icon="message-dollar">
+    Send a secure payment link by text; customers pay by card in seconds.
+  </Card>
+  <Card title="Deposits" icon="hand-holding-dollar">
+    Collect a deposit up front on larger jobs.
+  </Card>
+  <Card title="Recurring invoices" icon="rotate">
+    Bill maintenance plans and repeat customers automatically.
+  </Card>
+  <Card title="QuickBooks sync" icon="book">
+    Keep invoices and payments in sync with your accounting.
+  </Card>
+</CardGroup>
+
+## Send a text-to-pay invoice
+
+<Steps>
+  <Step title="Create the invoice">
+    From a job or contact, create an invoice with the line items and amount.
+  </Step>
+  <Step title="Send the payment link">
+    Send the customer a secure payment link by text (or email). Each link is unique to that invoice.
+  </Step>
+  <Step title="Customer pays by card">
+    They open the link and pay by card on a secure checkout page — no app or account needed.
+  </Step>
+  <Step title="You're notified instantly">
+    The payment is confirmed automatically and the invoice is marked paid in the CRM.
+  </Step>
+</Steps>
+
+<Note>
+Payment links are **single-purpose and secure** — each one only allows paying the specific invoice it was created for. Card details are handled by the payment processor (Stripe or Square), never stored by Revenue Sol.
+</Note>
+
+## Quotes & approvals
+
+Send a quote and the customer can approve or decline it from a secure link. When approved, you can convert it straight into an invoice and collect payment.
+
+## Recurring billing
+
+For maintenance plans and repeat work, recurring invoices are generated automatically on a schedule — so steady revenue keeps flowing without manual invoicing each cycle.
+
+## Connect your payment processor
+
+<CardGroup cols={2}>
+  <Card title="Stripe" icon="stripe" href="/integrations/stripe">
+    Card payments and checkout.
+  </Card>
+  <Card title="QuickBooks" icon="book" href="/integrations/quickbooks">
+    Sync invoices and payments to your accounting.
+  </Card>
+</CardGroup>
+
+<Info>
+Revenue Sol supports both **Stripe** and **Square** for processing payments. Your account is configured to use the processor set up for your business.
+</Info>

@@ -1,0 +1,79 @@
+---
+title: "RingCentral"
+description: "Connect RingCentral as your SMS and voice provider in Revenue Sol."
+---
+
+RingCentral is an alternative to [Twilio](/integrations/twilio) for **SMS and calls**. Connecting it lets Revenue Sol receive and send texts, handle inbound and outbound calls, and capture voicemails — all flowing into your [unified inbox](/guides/inbox).
+
+## What connecting RingCentral enables
+
+<CardGroup cols={2}>
+  <Card title="Two-way SMS" icon="comment-sms">
+    Send and receive texts from your RingCentral number.
+  </Card>
+  <Card title="Calls" icon="phone">
+    Inbound and outbound calling.
+  </Card>
+  <Card title="Voicemail" icon="voicemail">
+    Voicemail notifications surface in the inbox.
+  </Card>
+  <Card title="Presence" icon="circle-dot">
+    Availability updates from RingCentral.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<Note>
+You'll need a **RingCentral account** with SMS and voice enabled. Revenue Sol connects via secure OAuth — you'll log in to RingCentral and grant access.
+</Note>
+
+## Connect RingCentral
+
+<Steps>
+  <Step title="Open Settings → Connectors">
+    In Revenue Sol, go to **Settings → Connectors**.
+  </Step>
+  <Step title="Click Connect RingCentral">
+    This starts a secure OAuth flow.
+  </Step>
+  <Step title="Log in and authorize">
+    Sign in to RingCentral and grant Revenue Sol access to messaging and calls.
+  </Step>
+  <Step title="Pick your default number">
+    Revenue Sol fetches your available numbers — choose the default for messaging and calls.
+  </Step>
+  <Step title="Webhook subscription is created">
+    Revenue Sol automatically subscribes to message, call, voicemail, and presence events so they appear in your inbox.
+  </Step>
+</Steps>
+
+## How events reach Revenue Sol
+
+RingCentral sends events (`message-store`, `telephony`, `voicemail`, `presence`) to Revenue Sol's secure webhook endpoint, validated against your account. This is set up automatically during connect.
+
+<Note>
+Technical reference: RingCentral events are received at `/api/webhooks/ringcentral`. See [Webhooks](/developers/webhooks).
+</Note>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="Messages or calls stopped appearing">
+    A webhook subscription can occasionally expire or need re-establishing. Reconnect from **Settings → Connectors**, or use the retry option to re-subscribe.
+  </Accordion>
+  <Accordion title="I use both Twilio and RingCentral">
+    Set your preferred default provider under **Settings → Connectors** so new messages and calls use the right account.
+  </Accordion>
+</AccordionGroup>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Twilio" icon="phone" href="/integrations/twilio">
+    Alternative phone/SMS provider.
+  </Card>
+  <Card title="Unified Inbox" icon="inbox" href="/guides/inbox">
+    Where calls and texts land.
+  </Card>
+</CardGroup>

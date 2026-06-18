@@ -1,0 +1,73 @@
+---
+title: "Twilio"
+description: "Connect Twilio to send and receive SMS and calls in Revenue Sol."
+---
+
+Connecting Twilio gives Revenue Sol a phone number to **send and receive text messages and calls**. It powers your [unified inbox](/guides/inbox), SMS campaigns, missed-call text back, and the [AI voice receptionist](/guides/voice-agent). You bring your own Twilio account, so usage is billed at carrier cost.
+
+## What connecting Twilio enables
+
+<CardGroup cols={2}>
+  <Card title="Two-way SMS" icon="comment-sms">
+    Receive and reply to customer texts in the inbox.
+  </Card>
+  <Card title="Inbound & outbound calls" icon="phone">
+    Take and make calls, with call logging and recordings.
+  </Card>
+  <Card title="SMS campaigns" icon="bullhorn">
+    Send bulk SMS to your contacts.
+  </Card>
+  <Card title="Voice AI" icon="robot">
+    Route calls to the AI receptionist.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<Note>
+You'll need a **Twilio account** with at least one phone number that has **SMS and voice** capabilities enabled.
+</Note>
+
+## Connect Twilio
+
+<Steps>
+  <Step title="Open Settings → Connectors">
+    In Revenue Sol, go to **Settings → Connectors** (or **Settings → Integrations → Twilio**).
+  </Step>
+  <Step title="Start the connect flow">
+    Click **Connect Twilio** and authorize Revenue Sol to access your Twilio account through the secure connect flow.
+  </Step>
+  <Step title="Choose your number">
+    Revenue Sol reads the phone numbers available in your account. Pick the number you want to use as your default for messaging and calls.
+  </Step>
+  <Step title="You're connected">
+    Inbound texts and calls to that number now flow into your inbox, and you can send from it too.
+  </Step>
+</Steps>
+
+## How messages reach Revenue Sol
+
+Once connected, Twilio delivers inbound messages and call events to Revenue Sol's secure webhook endpoints, which verify each request's signature before processing. You don't need to configure these by hand during the standard connect flow.
+
+<Note>
+Technical reference: inbound SMS and delivery status are received at `/api/webhooks/twilio/sms`, and call events at `/api/webhooks/twilio/voice`. See [Webhooks](/developers/webhooks).
+</Note>
+
+## Choosing a default provider
+
+If you connect both Twilio and [RingCentral](/integrations/ringcentral), set your preferred default under **Settings → Connectors** so Revenue Sol knows which to use for new messages and calls.
+
+<Warning>
+Make sure your chosen number supports the channels you need (SMS and/or voice). A voice-only number can't send texts, and vice versa.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="RingCentral" icon="phone" href="/integrations/ringcentral">
+    Alternative phone/SMS provider.
+  </Card>
+  <Card title="AI Voice Receptionist" icon="robot" href="/guides/voice-agent">
+    Have AI answer your calls.
+  </Card>
+</CardGroup>

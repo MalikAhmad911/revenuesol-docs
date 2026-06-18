@@ -1,0 +1,74 @@
+---
+title: "AI Voice Receptionist"
+description: "An AI voice agent that answers your calls 24/7, qualifies leads, and books appointments."
+---
+
+The AI Voice Receptionist answers your business phone with a natural-sounding voice — nights, weekends, and whenever your team is busy. It greets callers, answers common questions, qualifies the job, and books appointments straight onto your calendar. Every call is transcribed and summarized into the [unified inbox](/guides/inbox). Voice AI is powered by Retell.
+
+{/* Screenshot placeholder: voice agent dashboard with a call transcript */}
+
+## What it does
+
+<CardGroup cols={2}>
+  <Card title="Answers every call" icon="phone-volume">
+    Picks up 24/7 so callers reach a real conversation instead of voicemail.
+  </Card>
+  <Card title="Qualifies the caller" icon="clipboard-list">
+    Captures name, job type, and details in a natural back-and-forth.
+  </Card>
+  <Card title="Books appointments" icon="calendar-check">
+    Checks availability and books the job, then confirms by text.
+  </Card>
+  <Card title="Logs everything" icon="file-lines">
+    Saves a transcript and summary to the customer's timeline.
+  </Card>
+</CardGroup>
+
+## How to set it up
+
+<Steps>
+  <Step title="Connect a phone number">
+    Make sure you've connected [Twilio](/integrations/twilio) or [RingCentral](/integrations/ringcentral) and chosen a default number.
+  </Step>
+  <Step title="Open the Voice Agent">
+    Go to **Voice Agent** in the app to configure your AI receptionist.
+  </Step>
+  <Step title="Add your Retell API key">
+    Provide your Retell API key. It's stored encrypted and used to power the voice agent for your business.
+  </Step>
+  <Step title="Customize the greeting & behavior">
+    Set the greeting, tone, and what the agent should ask. It uses your [Knowledge Hub](/guides/knowledge-hub) to answer questions accurately.
+  </Step>
+  <Step title="Route calls to the agent">
+    Send inbound (or after-hours/overflow) calls to the AI receptionist. New calls will be answered, booked, and logged automatically.
+  </Step>
+</Steps>
+
+## Appointment booking by voice
+
+When a caller is ready to book, the agent checks your availability and creates the appointment, then sends a confirmation text. The booking flows into your calendar and the customer's record, just like an appointment booked any other way.
+
+<Note>
+Calls handled by the voice agent appear in your [unified inbox](/guides/inbox) with a full transcript and summary, so your team always has context for follow-up.
+</Note>
+
+## Tips
+
+<Tip>
+Use the AI receptionist for **after-hours and overflow** first — it captures the leads you were losing to voicemail without changing how your team answers during the day.
+</Tip>
+
+<Warning>
+The quality of the agent's answers depends on your [Knowledge Hub](/guides/knowledge-hub). Add your services, pricing, service area, and FAQs before going live.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="AI Employee (messages)" icon="robot" href="/guides/ai-employee">
+    AI that handles texts and chats.
+  </Card>
+  <Card title="Knowledge Hub" icon="book" href="/guides/knowledge-hub">
+    What the agent uses to answer.
+  </Card>
+</CardGroup>

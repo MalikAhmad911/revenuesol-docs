@@ -1,0 +1,68 @@
+---
+title: "Webhooks"
+description: "The inbound webhook endpoints Revenue Sol receives from connected providers, and how they're verified."
+---
+
+Revenue Sol **receives** webhooks from the services you connect. These are inbound only — providers like Twilio and Stripe call Revenue Sol when something happens (a text arrives, a payment succeeds). You normally don't configure these by hand; they're set up when you connect an integration. This page documents them for reference and troubleshooting.
+
+<Note>
+All webhook endpoints are **multi-tenant** — each request is routed to the right business — and every request is **signature-verified** before it's processed. Requests that fail verification are rejected.
+</Note>
+
+## Endpoints
+
+| Provider | Endpoint | Verification | Key events |
+| --- | --- | --- | --- |
+| Twilio (SMS) | `POST /api/webhooks/twilio/sms` | `X-Twilio-Signature` (HMAC-SHA1) | inbound SMS, delivery status |
+| Twilio (Voice) | `POST /api/webhooks/twilio/voice` | `X-Twilio-Signature` (HMAC-SHA1) | inbound calls, call status |
+| Stripe | `POST /api/webhooks/stripe` | `Stripe-Signature` (HMAC-SHA256) | checkout, payment intents, refunds, invoices, subscriptions |
+| RingCentral | `POST /api/webhooks/ringcentral` | validation token + account match | message-store, telephony, voicemail, presence |
+| Retell | `POST /api/webhooks/retell` and `/api/webhooks/retell/[token]` | `X-Retell-Signature` (HMAC-SHA256) | voice call events, transcript, summary |
+| Meta | `POST /api/webhooks/meta` | `X-Hub-Signature-256` (HMAC-SHA256) | WhatsApp & Instagram messages |
+| Square | `POST /api/webhooks/square` | `x-square-hmacsha256-signature` | payments, invoices, subscriptions |
+
+<Info>
+Meta and RingCentral also perform a one-time **verification handshake** on a `GET` request when the subscription is first created (echoing a challenge or validation token).
+</Info>
+
+## Provider details
+
+<AccordionGroup>
+  <Accordion title="Twilio — SMS & Voice">
+    Inbound messages and delivery-status callbacks hit `/api/webhooks/twilio/sms`; call events hit `/api/webhooks/twilio/voice`. Payloads are form-encoded (Twilio standard). Requests are routed to the org by the destination phone number and verified with `X-Twilio-Signature`.
+  </Accordion>
+  <Accordion title="Stripe — Payments">
+    JSON payloads verified with `Stripe-Signature`. Handled events include `checkout.session.completed`, `checkout.session.async_payment_succeeded`/`failed`, `payment_intent.succeeded`/`payment_failed`, `charge.refunded`, `invoice.paid`, and `customer.subscription.created`/`updated`/`deleted`. Events are de-duplicated by their Stripe event ID for idempotency.
+  </Accordion>
+  <Accordion title="RingCentral — Messaging & Telephony">
+    JSON events for `message-store` (SMS), `telephony` (calls), `voicemail`, and `presence`. A validation token is echoed during the initial subscription handshake; events are matched to the connected account.
+  </Accordion>
+  <Accordion title="Retell — Voice AI">
+    JSON call events (completion, transcript, summary), verified with `X-Retell-Signature`. The `/api/webhooks/retell/[token]` variant routes events to a specific organization using an org-scoped token.
+  </Accordion>
+  <Accordion title="Meta — WhatsApp & Instagram">
+    JSON payloads for `whatsapp_business_account`, `instagram`, and `page` objects, verified with `X-Hub-Signature-256`. A `GET` handshake echoes `hub.challenge` when the webhook is first subscribed.
+  </Accordion>
+  <Accordion title="Square — Payments">
+    JSON events such as `payment.created`/`updated`, `invoice.payment_made`, and `subscription.created`/`updated`, verified with `x-square-hmacsha256-signature` and de-duplicated by event ID.
+  </Accordion>
+</AccordionGroup>
+
+## Scheduled jobs (cron)
+
+Background work (recurring invoices, recurring jobs, automation runs, weekly digests, AI memory refresh, QuickBooks reconciliation) runs on Trigger.dev, with HTTP cron fallbacks under `/api/cron/*`. These are **not** customer webhooks — they're protected by a server-side secret (`Authorization: Bearer <CRON_SECRET>`) and intended only for the platform's own schedulers.
+
+<Warning>
+Webhook endpoints are intended for the **providers themselves** to call. Don't post to them manually — requests without a valid provider signature are rejected.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Embeds & widgets" icon="code" href="/developers/embeds">
+    Public-facing widgets and links.
+  </Card>
+  <Card title="For Developers" icon="terminal" href="/developers/introduction">
+    Integration overview.
+  </Card>
+</CardGroup>

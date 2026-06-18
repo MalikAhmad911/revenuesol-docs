@@ -1,0 +1,62 @@
+---
+title: "Stripe"
+description: "How Revenue Sol uses Stripe to collect card payments."
+---
+
+Revenue Sol uses Stripe to process **card payments** — the engine behind text-to-pay links, invoices, deposits, and recurring billing. Customers pay on a secure, Stripe-hosted checkout page, and payments are confirmed back to Revenue Sol automatically.
+
+## What Stripe powers
+
+<CardGroup cols={2}>
+  <Card title="Text-to-pay links" icon="message-dollar">
+    Secure checkout links you send by text or email.
+  </Card>
+  <Card title="Invoices & deposits" icon="file-invoice-dollar">
+    Collect full payments or up-front deposits.
+  </Card>
+  <Card title="Recurring billing" icon="rotate">
+    Charge maintenance plans on a schedule.
+  </Card>
+  <Card title="Refunds" icon="rotate-left">
+    Process refunds that reflect back in the CRM.
+  </Card>
+</CardGroup>
+
+## How it works
+
+<Steps>
+  <Step title="You create a payment request">
+    From an invoice, quote, or job, Revenue Sol creates a payment request and a secure checkout link.
+  </Step>
+  <Step title="The customer pays">
+    They open the link and pay by card on Stripe's hosted checkout — no account needed.
+  </Step>
+  <Step title="Revenue Sol is notified">
+    Stripe sends a signed event to Revenue Sol's webhook, which marks the payment captured and updates the invoice.
+  </Step>
+</Steps>
+
+<Note>
+Technical reference: Stripe events are received at `/api/webhooks/stripe` (verified with the Stripe signature). Handled events include `checkout.session.completed`, `payment_intent.succeeded`, `charge.refunded`, `invoice.paid`, and subscription lifecycle events. See [Webhooks](/developers/webhooks).
+</Note>
+
+## Security
+
+<Info>
+Card details are handled entirely by **Stripe** on their secure checkout — Revenue Sol never sees or stores raw card numbers. Each payment link is single-purpose, valid only for the specific payment request it was created for.
+</Info>
+
+<Warning>
+Revenue Sol also supports **Square** as a payment processor. Your account is configured to use the processor set up for your business — you don't need both.
+</Warning>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Payments & Invoices" icon="credit-card" href="/guides/payments">
+    Create invoices and send text-to-pay links.
+  </Card>
+  <Card title="QuickBooks" icon="book" href="/integrations/quickbooks">
+    Sync payments to your accounting.
+  </Card>
+</CardGroup>

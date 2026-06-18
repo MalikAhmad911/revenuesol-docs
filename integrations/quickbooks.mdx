@@ -1,0 +1,65 @@
+---
+title: "QuickBooks Online"
+description: "Sync invoices, payments, and customers between Revenue Sol and QuickBooks Online."
+---
+
+Connecting QuickBooks Online keeps your books in sync with Revenue Sol — invoices, payments, and customers flow into QuickBooks automatically, so you don't double-enter data.
+
+## What syncing enables
+
+<CardGroup cols={2}>
+  <Card title="Invoice sync" icon="file-invoice">
+    Invoices created in Revenue Sol appear in QuickBooks.
+  </Card>
+  <Card title="Payment sync" icon="money-bill-transfer">
+    Payments reconcile against the right invoices.
+  </Card>
+  <Card title="Customer sync" icon="user">
+    Customers stay consistent across both systems.
+  </Card>
+  <Card title="Reconciliation" icon="scale-balanced">
+    A scheduled job keeps transactions reconciled.
+  </Card>
+</CardGroup>
+
+## Before you start
+
+<Note>
+You'll need a **QuickBooks Online** account. Revenue Sol connects via Intuit's secure OAuth — you'll sign in to QuickBooks and authorize access to your company (realm).
+</Note>
+
+## Connect QuickBooks
+
+<Steps>
+  <Step title="Open Settings → Integrations → QuickBooks">
+    In Revenue Sol, find the QuickBooks integration.
+  </Step>
+  <Step title="Click Connect QuickBooks">
+    You'll be redirected to Intuit to log in.
+  </Step>
+  <Step title="Authorize access">
+    Grant Revenue Sol access to your QuickBooks company's accounting data.
+  </Step>
+  <Step title="Sync runs">
+    Syncing begins automatically. You can also trigger a manual **Sync now** anytime.
+  </Step>
+</Steps>
+
+## Keeping data in sync
+
+After connecting, Revenue Sol pushes new invoices and payments to QuickBooks and runs a scheduled reconciliation to keep transactions aligned. You can run a manual sync whenever you want to push changes immediately.
+
+<Tip>
+If you're testing, connect a QuickBooks **sandbox** company first to verify the sync before pointing it at your live books.
+</Tip>
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Payments & Invoices" icon="credit-card" href="/guides/payments">
+    Create the invoices that sync to QuickBooks.
+  </Card>
+  <Card title="Stripe" icon="stripe" href="/integrations/stripe">
+    Process the card payments.
+  </Card>
+</CardGroup>

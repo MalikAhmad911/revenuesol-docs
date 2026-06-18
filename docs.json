@@ -1,0 +1,87 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Revenue Sol",
+  "colors": {
+    "primary": "#6366F1",
+    "light": "#818CF8",
+    "dark": "#4F46E5"
+  },
+  "favicon": "/favicon.svg",
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg",
+    "href": "https://www.revenuesol.com"
+  },
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Help Center",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": ["introduction", "quickstart"]
+          },
+          {
+            "group": "Guides",
+            "pages": [
+              "guides/inbox",
+              "guides/ai-employee",
+              "guides/voice-agent",
+              "guides/knowledge-hub",
+              "guides/jobs",
+              "guides/payments",
+              "guides/reviews",
+              "guides/mobile-app"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/twilio",
+              "integrations/ringcentral",
+              "integrations/stripe",
+              "integrations/quickbooks",
+              "integrations/google"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Developers",
+        "groups": [
+          {
+            "group": "Developers",
+            "pages": [
+              "developers/introduction",
+              "developers/webhooks",
+              "developers/embeds"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Live demo",
+        "href": "https://demo.revenuesol.com"
+      },
+      {
+        "label": "Main site",
+        "href": "https://www.revenuesol.com"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Open Revenue Sol",
+      "href": "https://app.revenuesol.com"
+    }
+  },
+  "footer": {
+    "socials": {
+      "website": "https://www.revenuesol.com"
+    }
+  }
+}

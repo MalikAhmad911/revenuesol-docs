@@ -4,7 +4,7 @@ Official documentation for [Revenue Sol](https://www.revenuesol.com) — the all
 
 ## Structure
 
-- `mint.json` — site config (navigation, theme, branding)
+- `docs.json` — site config (navigation, theme, branding)
 - `introduction.mdx`, `quickstart.mdx` — getting started
 - `guides/` — product/help-center guides (inbox, AI employee, voice agent, jobs, payments, reviews, knowledge hub, mobile app)
 - `integrations/` — connecting Twilio, RingCentral, Stripe, QuickBooks, Google

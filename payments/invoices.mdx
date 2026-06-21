@@ -1,0 +1,84 @@
+---
+title: "Invoices"
+description: "Bill customers and track what's owed."
+---
+
+Invoices let you bill customers for completed work and keep a clear picture of what's owed across your business. In Revenue Sol you can generate an invoice straight from a job or an approved quote, send it for payment, and watch it move from draft to paid without leaving your CRM.
+
+## Create and send an invoice
+
+Most invoices start from work you've already tracked, so the line items and customer details carry over automatically.
+
+<Steps>
+  <Step title="Start from a job or quote">
+    Open the related [job](/jobs/overview) or an approved [quote](/payments/quotes) and create an invoice from it. The customer, products, and pricing are pulled in for you, so you rarely build an invoice from scratch.
+  </Step>
+  <Step title="Review the line items">
+    Confirm the products and services, quantities, and amounts. You can adjust quantities, add items from your products and pricing catalog, or apply discounts before sending.
+  </Step>
+  <Step title="Send it to the customer">
+    Send the invoice by text-to-pay or email. The customer receives a secure [payment link](/payments/payment-links) where they can pay by card. No portal login or app is required on their end.
+  </Step>
+</Steps>
+
+<Tip>
+Sending by text-to-pay is the fastest way to get paid. Customers tap the link in the message and pay on their phone in seconds.
+</Tip>
+
+## Invoice statuses
+
+Each invoice carries a status so you always know where it stands. As payment activity happens, the status updates automatically.
+
+| Status | What it means |
+| --- | --- |
+| Draft | Created but not yet sent. You can still edit freely. |
+| Sent | Delivered to the customer and awaiting payment. |
+| Partially paid | Some payment received, with a remaining balance. |
+| Paid | Paid in full. Nothing else is owed. |
+| Overdue | Past its due date with a balance still outstanding. |
+
+<Note>
+You can filter your invoice list by status to quickly find everything that's unpaid or overdue and follow up.
+</Note>
+
+## Partial payments
+
+Customers don't always pay the full amount at once, and Revenue Sol handles that cleanly. When a customer pays part of an invoice, the balance is reduced and the invoice moves to **Partially paid**. The remaining amount stays due and the customer can pay it later from the same payment link.
+
+This is useful for deposits, progress billing on larger jobs, or letting a customer split a payment. You can also collect [recurring payments](/payments/recurring-payments) when a customer is on a payment plan or service agreement. Every payment, including refunds, is recorded against the invoice so the running balance is always accurate.
+
+<Warning>
+An invoice isn't fully settled until its status reads **Paid**. Always confirm the balance is zero before closing out a job financially.
+</Warning>
+
+## Reconciliation
+
+Reconciliation means matching the money you've collected to the invoices you've issued. Because card payments are processed through Stripe and recorded directly on each invoice, your paid, partial, and outstanding totals stay in sync automatically.
+
+To keep your accounting tidy, connect [QuickBooks](/integrations/quickbooks). Once linked, invoices and payments can sync to QuickBooks so your books match Revenue Sol without manual re-entry. Use the [payments reports](/analytics/reports) to review totals collected, outstanding balances, and aging at a glance.
+
+<AccordionGroup>
+  <Accordion title="Can I refund a payment?">
+    Yes. Refunds are issued through Stripe and recorded against the original invoice, so your balances and reports update automatically.
+  </Accordion>
+  <Accordion title="What does it cost to accept card payments?">
+    Card processing is handled by Stripe at standard Stripe rates. See [payments setup](/payments/setup) for details on connecting your Stripe account.
+  </Accordion>
+  <Accordion title="My invoice total looks wrong">
+    Open the invoice and check the line items and any discounts. If amounts still don't match after a sync, reach out to Infinite Rankers LLC at contact@infiniterankers.io.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Quotes & estimates" href="/payments/quotes">
+    Turn approved quotes into invoices in one click.
+  </Card>
+  <Card title="Connect QuickBooks" href="/integrations/quickbooks">
+    Sync invoices and payments to keep your books in order.
+  </Card>
+  <Card title="Recurring payments" href="/payments/recurring-payments">
+    Set up payment plans and ongoing service billing.
+  </Card>
+</CardGroup>

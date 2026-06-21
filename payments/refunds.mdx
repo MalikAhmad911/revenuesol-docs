@@ -1,0 +1,75 @@
+---
+title: "Refunds"
+description: "Issue refunds when needed."
+---
+
+Sometimes a customer overpays, cancels a job, or you need to make a goodwill adjustment. Revenue Sol lets you refund a card payment directly from the invoice it was charged against, so your records stay accurate and your reporting reflects the change automatically.
+
+## When you can issue a refund
+
+You can refund any successfully captured card payment that was processed through Stripe in Revenue Sol. This includes payments collected by [text-to-pay](/payments/text-to-pay), a [payment link](/payments/payment-links), or a card charged in person.
+
+<Note>
+Refunds apply to electronic card payments processed through Stripe. Payments you recorded manually (such as cash or a check) aren't sent to Stripe, so you'll adjust those by editing the recorded payment on the invoice rather than issuing a card refund.
+</Note>
+
+## Issue a full or partial refund
+
+<Steps>
+  <Step title="Open the paid invoice">
+    Go to the [invoice](/payments/invoices) the payment is attached to and find the payment you want to reverse in its payment history.
+  </Step>
+  <Step title="Start the refund">
+    Choose the refund option on that payment. You'll see the original amount and the amount still available to refund.
+  </Step>
+  <Step title="Choose full or partial">
+    For a **full refund**, keep the full amount. For a **partial refund**, enter a smaller amount — for example, to refund a deposit while keeping the balance, or to credit back one line item.
+  </Step>
+  <Step title="Confirm">
+    Add a short reason if you'd like (helpful for your team and for reporting), then confirm. The refund is submitted to Stripe and the original payment method is credited.
+  </Step>
+</Steps>
+
+<Tip>
+You can issue more than one partial refund against the same payment, as long as the combined total doesn't exceed what was originally charged.
+</Tip>
+
+## How long refunds take
+
+Once you confirm, the refund is processed by Stripe right away. The money typically lands back on the customer's card in **5 to 10 business days**, depending on their bank. The funds are returned to the original card the customer paid with — you can't redirect a refund to a different card or account.
+
+<Warning>
+Card processing fees may not be returned when you refund a payment. Refund policies and fee handling are set by Stripe and the card networks, not by Revenue Sol.
+</Warning>
+
+## How refunds show on the invoice
+
+After a refund processes, the invoice updates to keep your books straight:
+
+- The payment record shows the refunded amount alongside the original charge.
+- A **partial refund** reduces the amount paid, and the invoice balance reopens for the refunded portion if it isn't otherwise settled.
+- A **full refund** returns the invoice to an unpaid (or fully open) state so it's clear the customer no longer owes — or is owed — anything outstanding.
+
+This gives you and your customer a clear, itemized trail of what was charged and what was returned.
+
+## Refunds in reporting
+
+Refunds flow into your [payment reports](/analytics/reports) so your revenue figures reflect money actually kept, not just collected. Refunded amounts are netted out of the relevant period, which keeps totals, deposits, and reconciliation accurate. If you sync billing to [QuickBooks](/integrations/quickbooks), the refund carries through so your accounting stays in step with Revenue Sol.
+
+<Info>
+If a refund doesn't appear to process, confirm your [Stripe integration](/integrations/stripe) is still connected and that the original payment fully succeeded. For anything that still looks off, reach out to Infinite Rankers LLC at [contact@infiniterankers.io](mailto:contact@infiniterankers.io).
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Invoices" href="/payments/invoices">
+    Create, send, and track invoices and their payment status.
+  </Card>
+  <Card title="Payments" href="/payments/payments">
+    Collect card payments with text-to-pay and payment links.
+  </Card>
+  <Card title="Reports" href="/analytics/reports">
+    See how payments and refunds affect your revenue figures.
+  </Card>
+</CardGroup>

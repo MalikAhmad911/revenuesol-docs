@@ -1,0 +1,90 @@
+---
+title: "Payments overview"
+description: "Get paid faster, in person or by text."
+---
+
+Revenue Sol turns every quote, job, and conversation into a payment you can collect on the spot or by text. Instead of chasing checks or waiting on bank transfers, you send a link, your customer taps to pay with a card, and the money lands in your account. Card processing runs on Stripe, so you get bank-grade security without building anything yourself.
+
+## How customers pay you
+
+You have several ways to get paid, and you can mix and match them to fit the job:
+
+<CardGroup cols={2}>
+  <Card title="Invoices" href="/payments/invoices">
+    Itemized bills you send by text or email. Customers can pay online in a few taps.
+  </Card>
+  <Card title="Text-to-pay" href="/payments/text-to-pay">
+    A secure payment link delivered by SMS, ideal for collecting in the field.
+  </Card>
+  <Card title="Payment links" href="/payments/payment-links">
+    Reusable or one-off links you can drop into any message or share directly.
+  </Card>
+  <Card title="Recurring billing" href="/payments/recurring">
+    Automatic charges for maintenance plans, retainers, and subscriptions.
+  </Card>
+</CardGroup>
+
+## Card payments via Stripe
+
+All card payments are processed through Stripe. When you connect your Stripe account, customers can pay by debit or credit card from any invoice or payment link, and funds are deposited to your bank on Stripe's standard payout schedule. Stripe handles PCI compliance and card data, so sensitive details never touch Revenue Sol.
+
+<Note>
+Stripe charges its own per-transaction processing fee. Revenue Sol does not add a markup on top of card payments.
+</Note>
+
+To start accepting cards, connect Stripe from your integration settings. See the [Stripe integration](/integrations/stripe) guide for step-by-step setup.
+
+## Getting paid in a few steps
+
+<Steps>
+  <Step title="Connect Stripe">
+    Link your Stripe account so card payments can be processed and deposited. New connections take only a few minutes.
+  </Step>
+  <Step title="Send the request">
+    Send an invoice, a text-to-pay link, or a payment link from the job, quote, or conversation you're working in.
+  </Step>
+  <Step title="Customer pays">
+    Your customer opens the link and pays by card. No app or account is required on their end.
+  </Step>
+  <Step title="Funds settle">
+    The payment is recorded against the invoice and the money is paid out to your bank by Stripe.
+  </Step>
+</Steps>
+
+## Recurring payments and refunds
+
+For ongoing work like maintenance plans or service contracts, set up recurring billing so cards are charged automatically on the schedule you choose. If you ever need to return money to a customer, you can issue a refund directly against the original payment.
+
+<Tip>
+Pair payments with quotes so customers can approve, e-sign, and pay in one flow. Learn more in the [quotes and estimates](/quotes/overview) guide.
+</Tip>
+
+## Where payments show up
+
+Every transaction is tied to the customer and the work it relates to, so nothing gets lost:
+
+- On the **invoice** itself, where the status updates to paid, partially paid, or outstanding.
+- On the **contact record**, so you can see a customer's full payment history.
+- In **analytics and reports**, where you can track revenue, outstanding balances, and trends over time.
+
+<Info>
+Card data is held by Stripe, not Revenue Sol. For questions about a specific charge, payout timing, or disputes, your Stripe dashboard is the source of truth.
+</Info>
+
+## Need a hand?
+
+Revenue Sol is a product of Infinite Rankers LLC. If a payment isn't behaving as expected or you need help connecting Stripe, reach out to our team at [contact@infiniterankers.io](mailto:contact@infiniterankers.io).
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Invoices" href="/payments/invoices">
+    Create, send, and track itemized invoices.
+  </Card>
+  <Card title="Stripe integration" href="/integrations/stripe">
+    Connect Stripe to start accepting card payments.
+  </Card>
+  <Card title="Text-to-pay" href="/payments/text-to-pay">
+    Collect payment by text right from the field.
+  </Card>
+</CardGroup>

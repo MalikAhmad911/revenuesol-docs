@@ -1,0 +1,100 @@
+---
+title: "Tags & segments"
+description: "Group contacts for targeting and filtering."
+---
+
+Tags and segments help you organize the contacts in your Revenue Sol CRM so you can find the right people fast and target them with the right message. Tags are simple labels you attach to individual contacts. Segments are saved filters that automatically group contacts by the criteria you define. Together they turn a flat contact list into a system you can act on.
+
+## Tags vs. segments
+
+Understanding the difference helps you decide which to reach for.
+
+<CardGroup cols={2}>
+  <Card title="Tags">
+    Manual labels you add to a contact, like `past-customer`, `maintenance-plan`, or `vip`. A contact can have many tags, and you apply or remove them yourself.
+  </Card>
+  <Card title="Segments">
+    Saved, rule-based groups, like "all contacts tagged maintenance-plan in the 60601 area." Membership updates automatically as contacts match or stop matching the rules.
+  </Card>
+</CardGroup>
+
+<Tip>
+Use tags as the building blocks and segments to combine those tags with other data (location, lead stage, last job date) into a reusable audience.
+</Tip>
+
+## Creating and applying tags
+
+You can tag a contact from their profile in the [contacts](/crm/contacts) area, or tag several contacts at once.
+
+<Steps>
+  <Step title="Open a contact or select several">
+    Go to your contacts list and open a single contact, or check the boxes next to multiple contacts to act on them in bulk.
+  </Step>
+  <Step title="Add a tag">
+    Add an existing tag or type a new one. Keep names short, lowercase, and consistent so they stay easy to reuse.
+  </Step>
+  <Step title="Reuse the tag everywhere">
+    Once a tag exists, it's available across your whole account, so you and your team apply the same labels the same way.
+  </Step>
+</Steps>
+
+<Note>
+Tags can also be applied automatically by the [automations engine](/marketing/automations). For example, when a job is marked complete, an automation can add a `past-customer` tag with no manual step.
+</Note>
+
+## Building segments
+
+Segments let you filter contacts by tags combined with other CRM data, then save that filter for repeated use.
+
+<Steps>
+  <Step title="Filter your contacts">
+    From the contacts list, apply filters such as tags, [lead stage](/crm/leads), location, or activity to narrow the list to the people you want.
+  </Step>
+  <Step title="Save it as a segment">
+    Give the filter a clear name like "Maintenance plan members" so anyone on your team understands who's inside.
+  </Step>
+  <Step title="Let it stay current">
+    As contacts gain or lose the qualifying tags and attributes, they move in and out of the segment automatically.
+  </Step>
+</Steps>
+
+## Practical examples
+
+<AccordionGroup>
+  <Accordion title="Past customers">
+    Tag every contact whose job was completed with `past-customer`. Build a segment from that tag to send seasonal tune-up reminders or win-back offers.
+  </Accordion>
+  <Accordion title="Maintenance plan members">
+    Tag enrolled contacts with `maintenance-plan` and create a segment to schedule recurring service and send renewal notices.
+  </Accordion>
+  <Accordion title="New leads by source">
+    Tag leads by where they came from, such as `web-form` or `meta-lead`, to measure which channels convert and follow up accordingly.
+  </Accordion>
+  <Accordion title="High-value contacts">
+    Tag your best accounts `vip` and segment them so they get faster follow-up and priority scheduling.
+  </Accordion>
+</AccordionGroup>
+
+## Targeting campaigns and automations
+
+Segments are how you aim your outreach. When you build an SMS or email [campaign](/marketing/campaigns), choose a segment as the audience so the message reaches exactly the right contacts, like sending a spring AC tune-up offer only to your `past-customer` segment. You can also use tags and segments as triggers and filters inside [automations](/marketing/automations) so the right follow-up fires for the right group.
+
+<Warning>
+Always confirm contacts have valid consent before texting or emailing them. Tidy tags and segments keep your sends relevant and your opt-out rates low.
+</Warning>
+
+If you need help structuring a tagging plan for your business, reach out to the Revenue Sol team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Contacts" href="/crm/contacts">
+    Manage your customer and lead records, the data behind every tag and segment.
+  </Card>
+  <Card title="Campaigns" href="/marketing/campaigns">
+    Target a segment with SMS and email campaigns, including A/B testing.
+  </Card>
+  <Card title="Automations" href="/marketing/automations">
+    Apply tags automatically and trigger follow-ups based on segments.
+  </Card>
+</CardGroup>

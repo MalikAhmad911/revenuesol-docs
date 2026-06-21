@@ -1,0 +1,91 @@
+---
+title: "Sending & receiving SMS"
+description: "Two-way texting with your customers."
+---
+
+Revenue Sol turns your business phone number into a two-way texting line, so every SMS conversation lives alongside calls, email, and web-form leads in your unified inbox. Customers reply, you respond, and the full thread stays attached to the right contact.
+
+<Note>
+Texting requires a connected phone number from Twilio or RingCentral. Messages are billed at carrier cost with no markup. If you have not connected a number yet, set one up first in your integration settings.
+</Note>
+
+## Before you start
+
+Two-way SMS only works once your number is live and SMS-enabled.
+
+<Steps>
+  <Step title="Connect Twilio or RingCentral">
+    Link your provider in your account integrations. You bring your own number, and Revenue Sol routes texts through it.
+  </Step>
+  <Step title="Confirm SMS is enabled on the number">
+    US local 10-digit numbers used for business texting typically need carrier registration (10DLC) to send reliably. Your provider handles this registration.
+  </Step>
+  <Step title="Open the inbox">
+    Head to your unified inbox to see and reply to every conversation in one place.
+  </Step>
+</Steps>
+
+## Sending a text
+
+From the [unified inbox](/inbox/overview), open a contact's conversation and type your message in the SMS composer. You can also start a new outbound text to any contact in your [CRM](/crm/contacts). Messages send from your connected business number, so customers see a consistent caller ID and can reply directly to the same thread.
+
+<Tip>
+Keep first messages short and identify your business by name. Customers are far more likely to reply when they recognize who is texting.
+</Tip>
+
+## Receiving texts
+
+Inbound texts arrive in real time and appear in the matching contact's conversation. If the sender is not yet a contact, Revenue Sol can create a new lead so nothing slips through. You will get a push notification on the [mobile app](/mobile/overview) and can reply from your phone in the field.
+
+## Missed-call text-back
+
+When a call comes in and no one answers, Revenue Sol can automatically text the caller back so the lead is not lost. A typical message acknowledges the missed call and invites the customer to reply or book. This keeps you responsive even when your team is on a job, and the reply lands right back in the unified inbox.
+
+<Info>
+You can pair missed-call text-back with the 24/7 AI receptionist and the [AI Employee](/ai/ai-employee) so that after-hours texts get an instant, on-brand reply drawn from your Knowledge Hub.
+</Info>
+
+## Sending MMS
+
+You can send and receive MMS (picture and media messages) on numbers that support it. This is useful for sharing job-site photos, before-and-after shots, or a quick image of a part. Media attachments display inline in the conversation. MMS availability and pricing depend on your carrier and number type.
+
+## Opt-out handling and compliance
+
+US texting is governed by consumer protection rules (TCPA) and carrier requirements. Revenue Sol helps you stay compliant, but you are responsible for how you message your customers.
+
+<Warning>
+Only text people who have given you permission to contact them. Texting customers who have not opted in can trigger carrier filtering, fines, and number suspension.
+</Warning>
+
+- **Honor opt-outs automatically.** When a customer replies STOP, UNSUBSCRIBE, or similar keywords, they are removed from future messaging and you should not text them again unless they opt back in.
+- **Support opt-back-in.** Replies like START let a customer resume messages.
+- **Make consent clear.** Tell customers what kind of texts to expect and how often when they sign up.
+- **Identify your business.** Include your business name so recipients know who is texting.
+
+<AccordionGroup>
+  <Accordion title="Why are my texts not delivering?">
+    The most common cause is missing 10DLC registration on a US local number, or an unverified number with your provider. Confirm registration is complete in Twilio or RingCentral, and that the number is SMS-enabled.
+  </Accordion>
+  <Accordion title="Can I text a customer who opted out?">
+    No. Once someone opts out, do not message them again unless they explicitly opt back in. This is both a legal and carrier requirement.
+  </Accordion>
+  <Accordion title="What does texting cost?">
+    Calls and texts are billed at your carrier's cost with no Revenue Sol markup. AI features are included on every plan.
+  </Accordion>
+</AccordionGroup>
+
+If delivery problems persist after registration is confirmed, contact Infinite Rankers LLC support at contact@infiniterankers.io.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Unified inbox" href="/inbox/overview">
+    See how calls, SMS, email, and web leads come together in one conversation view.
+  </Card>
+  <Card title="AI Employee" href="/ai/ai-employee">
+    Let AI auto-reply to texts using your Knowledge Hub and AI credits.
+  </Card>
+  <Card title="SMS campaigns" href="/marketing/sms-campaigns">
+    Send bulk texts with A/B testing for promotions and re-engagement.
+  </Card>
+</CardGroup>

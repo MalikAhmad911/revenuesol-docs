@@ -7,7 +7,7 @@
     "light": "#818CF8",
     "dark": "#4F46E5"
   },
-  "favicon": "/favicon.svg",
+  "favicon": "/favicon.png",
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
@@ -20,21 +20,110 @@
         "groups": [
           {
             "group": "Getting Started",
-            "pages": ["introduction", "quickstart"]
-          },
-          {
-            "group": "Guides",
             "pages": [
-              "guides/inbox",
-              "guides/ai-employee",
-              "guides/voice-agent",
-              "guides/knowledge-hub",
-              "guides/jobs",
-              "guides/payments",
-              "guides/reviews",
-              "guides/mobile-app"
+              "introduction",
+              "quickstart",
+              "getting-started/platform-overview",
+              "getting-started/onboarding",
+              "getting-started/connect-phone-number",
+              "getting-started/import-contacts",
+              "getting-started/invite-team",
+              "getting-started/key-concepts"
             ]
           },
+          {
+            "group": "Inbox & Conversations",
+            "pages": [
+              "inbox/overview",
+              "inbox/unified-inbox",
+              "inbox/sms",
+              "inbox/calling",
+              "inbox/email-in-inbox",
+              "inbox/canned-responses",
+              "inbox/assign-and-snooze"
+            ]
+          },
+          {
+            "group": "AI Employee",
+            "pages": [
+              "ai/overview",
+              "ai/how-replies-work",
+              "ai/ai-credits",
+              "ai/knowledge-hub",
+              "ai/command-center",
+              "ai/approvals",
+              "ai/voice-vs-text",
+              "ai/best-practices"
+            ]
+          },
+          {
+            "group": "Voice & Receptionist",
+            "pages": [
+              "voice/overview",
+              "voice/ai-receptionist-24-7",
+              "voice/call-routing",
+              "voice/after-hours-voicemail",
+              "voice/retell-setup"
+            ]
+          },
+          {
+            "group": "CRM",
+            "pages": [
+              "crm/overview",
+              "crm/contacts",
+              "crm/leads",
+              "crm/pipelines",
+              "crm/lead-stages",
+              "crm/tasks",
+              "crm/tags-segments",
+              "crm/notes-activity"
+            ]
+          },
+          {
+            "group": "Jobs & Scheduling",
+            "pages": [
+              "jobs/overview",
+              "jobs/create-jobs",
+              "jobs/dispatch-board",
+              "jobs/routing",
+              "jobs/calendar",
+              "jobs/online-booking",
+              "jobs/reminders"
+            ]
+          },
+          {
+            "group": "Quotes & Estimates",
+            "pages": [
+              "quotes/overview",
+              "quotes/create-quotes",
+              "quotes/e-sign-approval",
+              "quotes/products-pricing"
+            ]
+          },
+          {
+            "group": "Payments",
+            "pages": [
+              "payments/overview",
+              "payments/invoices",
+              "payments/text-to-pay",
+              "payments/card-payments",
+              "payments/recurring",
+              "payments/payment-links",
+              "payments/refunds"
+            ]
+          },
+          {
+            "group": "Reviews & Reputation",
+            "pages": [
+              "reviews/overview",
+              "reviews/auto-requests"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Integrations",
+        "groups": [
           {
             "group": "Integrations",
             "pages": [
@@ -81,7 +170,8 @@
   },
   "footer": {
     "socials": {
-      "website": "https://www.revenuesol.com"
+      "website": "https://www.revenuesol.com",
+      "x": "https://infiniterankers.io"
     }
   }
 }

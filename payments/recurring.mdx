@@ -1,0 +1,92 @@
+---
+title: "Recurring payments"
+description: "Bill maintenance plans and subscriptions automatically."
+---
+
+Recurring payments let you charge customers on a repeating schedule without lifting a finger. They're built for the steady revenue that keeps home-service businesses healthy: HVAC maintenance plans, monthly pest-control routes, recurring lawn care, weekly or biweekly cleaning, and service-agreement retainers.
+
+## When to use recurring payments
+
+Use a recurring payment whenever a customer agrees to an ongoing or repeating charge rather than a single job. Common examples:
+
+- An HVAC company billing a customer $19/month for a comfort club that covers two seasonal tune-ups.
+- A pest-control business charging $89 every quarter for scheduled treatments.
+- A cleaning service collecting $140 every two weeks for a standing appointment.
+- A landscaper billing a flat monthly rate across the growing season.
+
+<Info>
+Recurring payments run on Stripe, so you'll need your [Stripe account connected](/payments/stripe) and a saved card on file for the customer. Card processing fees apply at Stripe's standard rates.
+</Info>
+
+## Setting up a recurring charge
+
+<Steps>
+<Step title="Open the customer or job">
+Find the [contact](/crm/contacts) you want to bill, or start from the related job. The customer should already have an approved quote or an agreed plan price.
+</Step>
+<Step title="Create the recurring payment">
+From the customer's billing area, choose to set up a recurring payment instead of a one-time invoice. Give it a clear name such as "Comfort Club" or "Quarterly Pest Plan" so it's easy to recognize later.
+</Step>
+<Step title="Set the amount and schedule">
+Enter the amount to charge and pick how often it repeats: weekly, biweekly, monthly, quarterly, or annually. Set the start date and, if the plan has a fixed term, an end date. Otherwise it continues until you cancel it.
+</Step>
+<Step title="Collect the payment method">
+Have the customer save a card on file. You can send a secure payment link by text or email so they enter their card themselves, or capture it in person. The card is stored securely in Stripe, not in Revenue Sol.
+</Step>
+<Step title="Confirm and activate">
+Review the schedule and amount, then activate. The first charge runs on the start date and repeats automatically on the cadence you set.
+</Step>
+</Steps>
+
+<Tip>
+Pair recurring billing with scheduled jobs so the work and the money stay in sync. For example, attach a quarterly charge to a recurring pest-control visit so each treatment and payment line up on the calendar.
+</Tip>
+
+## Managing active plans
+
+Every recurring payment shows its status, next charge date, and history on the customer's record. From there you can:
+
+- **Update the amount** when a plan price changes at renewal.
+- **Change the schedule** to move the billing date or cadence.
+- **Swap the card** if a customer's card expires or is declined.
+- **Pause** a plan temporarily, then resume it later.
+
+When a charge succeeds, the customer receives a receipt and the payment is recorded against their account, so your [payment reports](/analytics/reports) stay accurate.
+
+<Warning>
+If a recurring charge fails (for example, an expired or declined card), Revenue Sol flags it so you can follow up. Reach out to the customer for an updated card, then retry the charge. Failed payments do not retry silently forever.
+</Warning>
+
+## Canceling a plan
+
+To stop future charges, open the recurring payment and cancel it. Cancellation stops upcoming charges only; it does not refund prior payments. If you need to return money for a charge that already ran, issue a [refund](/payments/refunds) on that specific payment.
+
+## Frequently asked questions
+
+<AccordionGroup>
+<Accordion title="Can customers cancel their own plan?">
+Customers can't cancel from a receipt. They contact you, and you cancel the plan on their record. This keeps you in control of service agreements and prevents accidental cancellations.
+</Accordion>
+<Accordion title="What happens if a card is declined?">
+The charge is marked as failed and surfaced for follow-up. Ask the customer for a new card, update the payment method, and retry. The plan stays active so future charges still attempt.
+</Accordion>
+<Accordion title="Can I offer different billing frequencies for the same service?">
+Yes. Create separate recurring payments with different cadences and amounts, for example a monthly plan and a discounted annual plan, and put each customer on the one they choose.
+</Accordion>
+</AccordionGroup>
+
+Need a hand setting up a plan? Email the team at contact@infiniterankers.io.
+
+## Next steps
+
+<CardGroup cols={2}>
+<Card title="Invoices" href="/payments/invoices">
+Bill for one-off jobs and send text-to-pay invoices.
+</Card>
+<Card title="Refunds" href="/payments/refunds">
+Return money on a payment that already cleared.
+</Card>
+<Card title="Connect Stripe" href="/payments/stripe">
+Link your Stripe account to accept cards and recurring charges.
+</Card>
+</CardGroup>

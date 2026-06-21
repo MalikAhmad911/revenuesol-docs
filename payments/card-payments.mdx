@@ -1,0 +1,94 @@
+---
+title: "Card payments"
+description: "Accept credit and debit cards."
+---
+
+Revenue Sol lets you accept credit and debit card payments directly from your customers, whether you're standing in their driveway or following up days after the job is done. Card processing is powered by Stripe, the same secure platform used by millions of businesses, so you get bank-grade security without handling sensitive card data yourself.
+
+## Before you start
+
+To accept card payments, you first need to connect a Stripe account to Revenue Sol. This is a one-time setup that links your business bank account so payouts land where you want them.
+
+<Note>
+If you haven't connected Stripe yet, follow the [Stripe setup](/payments/stripe-setup) guide first. You can't collect card payments until Stripe is connected and your account is approved for payouts.
+</Note>
+
+## In-person vs. online payments
+
+There are two main ways to collect a card payment, and you can use whichever fits the moment.
+
+<CardGroup cols={2}>
+  <Card title="Online (text-to-pay & links)">
+    Send a [payment link](/payments/payment-links) or a text-to-pay message so the customer pays from their phone. Best for follow-ups, remote jobs, and getting paid faster after you leave the site.
+  </Card>
+  <Card title="In person">
+    Enter the customer's card details on a job or invoice while you're on site, or have them tap a link you text right there. Good for closing the payment before you pack up.
+  </Card>
+</CardGroup>
+
+Either way, the payment is tied to the invoice or job, so your books stay clean and the customer's record updates automatically.
+
+## Processing a card payment
+
+<Steps>
+  <Step title="Open the invoice or quote">
+    Go to the invoice, quote, or job you want to collect on. Make sure the amount is correct before you charge.
+  </Step>
+  <Step title="Choose how to collect">
+    Pick text-to-pay or a payment link to let the customer pay on their own device, or take the card details in person to charge on the spot.
+  </Step>
+  <Step title="Confirm the payment">
+    Once the card is entered and approved, Stripe processes the charge and Revenue Sol marks the invoice as paid in real time.
+  </Step>
+  <Step title="Track the payout">
+    Funds settle to your connected bank account on Stripe's standard payout schedule. You can review every transaction inside your payments history.
+  </Step>
+</Steps>
+
+<Tip>
+Text-to-pay typically gets you paid faster than mailing or waiting for a check. Send the link before you leave the job and many customers pay within minutes.
+</Tip>
+
+## Receipts
+
+When a card payment succeeds, the customer can receive a receipt automatically, and the invoice in Revenue Sol reflects the paid status with the amount, date, and method recorded. This gives both you and your customer a clear paper trail for every transaction.
+
+## Refunds
+
+If you need to return money to a customer, you can issue a refund against a completed card payment. The refund is processed back to the original card through Stripe. See [Refunds](/payments/refunds) for the full process and timing.
+
+## Pricing and carrier costs
+
+Card processing fees are set by Stripe and deducted from each transaction. Revenue Sol does not add a markup to card processing. AI features are included on every plan, and payment processing is available across all tiers.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="The card was declined">
+    Declines usually come from the customer's bank, not Revenue Sol. Ask the customer to verify the card number, expiration, CVC, and billing ZIP, or to try a different card.
+  </Accordion>
+  <Accordion title="I don't see the option to take a card">
+    Confirm your Stripe account is connected and approved. Until Stripe is fully set up, card collection stays disabled. Revisit [Stripe setup](/payments/stripe-setup).
+  </Accordion>
+  <Accordion title="When will I get paid?">
+    Payouts follow Stripe's payout schedule to your connected bank account. You can review and adjust payout timing in your Stripe dashboard.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+Need a hand getting card payments running? Revenue Sol is a product of Infinite Rankers LLC. Email <a href="mailto:contact@infiniterankers.io">contact@infiniterankers.io</a> and our team will help.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Stripe setup" href="/payments/stripe-setup">
+    Connect your Stripe account so you can collect card payments and receive payouts.
+  </Card>
+  <Card title="Payment links" href="/payments/payment-links">
+    Create shareable links and text-to-pay messages to get paid from anywhere.
+  </Card>
+  <Card title="Invoices" href="/payments/invoices">
+    Build and send invoices that customers can pay by card in a tap.
+  </Card>
+</CardGroup>

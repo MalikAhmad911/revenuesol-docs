@@ -1,0 +1,76 @@
+---
+title: "Call routing"
+description: "Decide which calls the AI answers and where they go."
+---
+
+Call routing controls which incoming calls your AI receptionist picks up and what happens to the rest. With the right setup, the AI handles the calls you want it to, your team stays in the loop on the calls that matter, and no caller is ever left without a way to reach you.
+
+## How routing works
+
+Calls come in on the Twilio or RingCentral phone number you connect to Revenue Sol. From there, your routing rules decide whether the AI receptionist answers, whether the call rings your team first, and what happens if no one is available. Because you bring your own number, calls and texts are billed at carrier cost with no markup.
+
+<Info>
+You need a connected phone number before routing takes effect. See [Bring your own number](/voice/bring-your-own-number) to connect Twilio or RingCentral.
+</Info>
+
+## When the AI answers
+
+You choose the conditions under which the AI receptionist takes a call. The common modes are:
+
+<Steps>
+  <Step title="Always answer">
+    The AI answers every incoming call immediately. This is the best fit when you want 24/7 coverage and consistent booking, or when you do not have a front-desk team.
+  </Step>
+  <Step title="After-hours only">
+    Your team handles calls during business hours, and the AI takes over nights, weekends, and holidays so you never miss an after-hours lead.
+  </Step>
+  <Step title="Overflow">
+    The call rings your team first. If it goes unanswered after a set number of rings or everyone is busy, the AI picks up instead of sending the caller to a dead-end voicemail.
+  </Step>
+</Steps>
+
+<Tip>
+Most home-service businesses start with overflow plus after-hours coverage. That keeps human contact during the day while guaranteeing every call is answered around the clock.
+</Tip>
+
+## Forwarding to your team
+
+When you want a live person to take the call, routing can forward it to a team member or a group before, or instead of, the AI. You can use this for sales calls, priority customers, or specific call types you would rather handle personally. If the forward is not answered, the call falls back to your chosen behavior, such as the AI receptionist or voicemail, so the caller is never stranded.
+
+## Escalation
+
+Escalation is the path a call takes when it needs a human after the AI has engaged. The AI receptionist can answer, gather details, and book the job on its own, but for situations it should not handle alone, it hands the call off.
+
+Typical escalation triggers include:
+
+- A caller asks to speak to a person.
+- The request is urgent (for example, a no-heat or water-leak emergency).
+- The conversation falls outside what the AI is trained to handle.
+
+When escalation fires, the call can transfer to your team or capture the details so someone follows up quickly. Every call, whether the AI handles it or escalates, lands in your [unified inbox](/inbox/overview) as part of the full conversation history.
+
+<Warning>
+Always set a fallback for unanswered forwards and escalations. Without one, a transfer that no one picks up can drop the caller. Routing the fallback to the AI or to voicemail keeps every lead captured.
+</Warning>
+
+## Tips for a reliable setup
+
+- Match your routing mode to your staffing: always-on for solo operators, overflow or after-hours for teams.
+- Keep your [Knowledge Hub](/ai/knowledge-hub) current so the AI answers accurately and escalates only when it should.
+- Review handled and escalated calls in the inbox to refine when the AI should step aside.
+
+Need help designing a routing flow for your business? Reach the team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Bring your own number" href="/voice/bring-your-own-number">
+    Connect a Twilio or RingCentral number so routing can take calls.
+  </Card>
+  <Card title="AI receptionist" href="/voice/ai-receptionist">
+    See how the 24/7 voice AI answers calls and books jobs.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    Review every call, text, and email in one conversation view.
+  </Card>
+</CardGroup>

@@ -1,0 +1,83 @@
+---
+title: "Import your contacts"
+description: "Bring your existing customer list into Revenue Sol."
+---
+
+Moving from spreadsheets or another CRM? You can bring your existing customers into Revenue Sol in a few minutes by uploading a CSV file. Once imported, every contact is ready to receive quotes, invoices, review requests, and replies from your AI receptionist.
+
+## Before you start
+
+The cleanest imports come from a well-prepared file. Export your customer list from your spreadsheet or current CRM as a `.csv`, then check it over.
+
+<Steps>
+  <Step title="Export to CSV">
+    Most CRMs and spreadsheet tools (Google Sheets, Excel, Jobber, HubSpot, ServiceTitan, and others) can export a contact list as a CSV. Save it somewhere you can find it.
+  </Step>
+  <Step title="Add clear column headers">
+    Give the first row simple headers like First Name, Last Name, Email, Phone, Company, Address, and Tags. Clear headers make the next step faster.
+  </Step>
+  <Step title="Tidy the data">
+    Put first and last names in separate columns where you can, use a consistent phone format, and remove obviously empty or test rows.
+  </Step>
+</Steps>
+
+<Tip>
+Phone numbers are how the AI receptionist and your unified inbox match incoming calls and texts to the right contact. Use full US numbers (for example, +1 555 123 4567 or 555-123-4567) so matching works correctly.
+</Tip>
+
+## Map your fields
+
+When you upload the file, Revenue Sol reads your column headers and shows a mapping screen. Each of your columns is matched to a Revenue Sol contact field such as name, email, phone, company, address, or tags.
+
+Review the matches and adjust any that landed on the wrong field. You can skip columns you do not need. Mapping your data into [tags or segments](/crm/contacts) up front makes it easy to target the right people later in [marketing campaigns](/marketing/campaigns) and [automations](/marketing/automations).
+
+<Note>
+You only need to map the fields you care about. At minimum, include a name plus either a phone number or an email so the contact is reachable.
+</Note>
+
+## Deduplication
+
+Revenue Sol checks your import against contacts that already exist so you do not end up with duplicates. Matching is based on email address and phone number.
+
+When a match is found, the existing contact is updated with any new details rather than being duplicated. New rows that do not match an existing contact are added as fresh records. If you have run an import before or already have customers in the system, this keeps your list clean automatically.
+
+<Warning>
+Inconsistent phone formats or typos in email addresses can defeat deduplication and create near-duplicates. Clean these up in your CSV before importing.
+</Warning>
+
+## What happens after import
+
+Once the import finishes, you will see a summary of how many contacts were added and how many existing ones were updated. Your contacts then appear in the [Contacts](/crm/contacts) list, ready to use across the platform.
+
+From there you can:
+
+- Convert prospects into [leads](/crm/leads) and move them through your pipeline.
+- Send [quotes](/quotes/estimates) and [invoices](/payments/invoices) by text or email.
+- Reach groups with [SMS and email campaigns](/marketing/campaigns).
+
+<AccordionGroup>
+  <Accordion title="What file types can I upload?">
+    A standard comma-separated `.csv` file. Export from your spreadsheet or previous CRM in CSV format.
+  </Accordion>
+  <Accordion title="Will importing send any messages to my contacts?">
+    No. Importing only adds contacts to your CRM. Nothing is sent until you choose to send a campaign or message.
+  </Accordion>
+  <Accordion title="Can I import again later?">
+    Yes. You can import as often as you like. Deduplication updates existing contacts instead of creating duplicates.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+Have a large or unusual export and want a hand getting it formatted? Email the Revenue Sol team at contact@infiniterankers.io (Revenue Sol is a product of Infinite Rankers LLC) and we will help you map it.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Manage contacts" href="/crm/contacts">
+    Organize your imported list with tags, segments, notes, and tasks.
+  </Card>
+  <Card title="Work your leads" href="/crm/leads">
+    Turn contacts into leads and move them through your pipeline.
+  </Card>
+</CardGroup>

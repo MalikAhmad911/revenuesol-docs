@@ -1,0 +1,83 @@
+---
+title: "Text-to-pay"
+description: "Send a payment link by text and get paid on the spot."
+---
+
+Text-to-pay lets you collect payment the moment a job wraps up. Instead of mailing an invoice and waiting days for a check, you send your customer a secure pay link by SMS, they tap it and pay by card, and the payment posts straight to the invoice in Revenue Sol. It is the fastest way for home-service businesses to turn finished work into money in the bank.
+
+## How text-to-pay works
+
+Text-to-pay connects your invoicing, your phone number, and your card processor into one tap-to-pay flow.
+
+<Steps>
+  <Step title="Create or open an invoice">
+    Build an invoice from a completed [job](/jobs/overview) or [quote](/payments/quotes), or create a standalone one. The amount due drives the payment link.
+  </Step>
+  <Step title="Send the pay link by text">
+    Choose to send the invoice by SMS. Revenue Sol texts a secure payment link to the customer from your connected Twilio or RingCentral number, so the message comes from your business.
+  </Step>
+  <Step title="Customer pays by card">
+    Your customer opens the link on their phone and pays by card on a secure checkout page powered by [Stripe](/integrations/stripe). No app, login, or account is required.
+  </Step>
+  <Step title="Payment posts to the invoice">
+    As soon as the card clears, the payment is recorded against the invoice and the balance updates automatically. You and the customer both see it marked paid.
+  </Step>
+</Steps>
+
+<Note>
+Text-to-pay uses your own Twilio or RingCentral number. Texts are billed at carrier cost with no markup. Card payments are processed through Stripe, so you will need Stripe connected before you can collect.
+</Note>
+
+## Why it speeds up collection
+
+Getting paid is usually the slowest part of a service call. Text-to-pay removes the friction:
+
+- **Paid on-site.** Your technician can send the link before leaving the driveway, while the work is fresh and the customer is ready to pay.
+- **No waiting on checks or callbacks.** A tap-to-pay link is far easier than mailing a check or reading a card number over the phone.
+- **Higher open rates.** Texts get read in minutes, so invoices do not sit ignored in an email inbox.
+- **Automatic reconciliation.** Because the payment posts directly to the invoice, there is no manual matching or double entry.
+
+<Tip>
+Pair text-to-pay with [payment reminders](/payments/reminders) so unpaid invoices automatically nudge the customer again until the balance is cleared.
+</Tip>
+
+## What the customer sees
+
+The customer receives a short text with a link. Tapping it opens a branded, mobile-friendly checkout showing the line items and amount due. They enter their card details once and confirm. They can save the payment confirmation, and you can send a receipt automatically.
+
+<Info>
+Text-to-pay works alongside other payment options in Revenue Sol, including emailed [payment links](/payments/payment-links), [recurring payments](/payments/recurring-payments), and in-person card collection. Use whichever fits the job.
+</Info>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need Stripe to use text-to-pay?">
+    Yes. Card payments are processed through Stripe, so connect your Stripe account first. See [Stripe integration](/integrations/stripe) to get set up.
+  </Accordion>
+  <Accordion title="Which number does the text come from?">
+    The pay link is sent from your connected Twilio or RingCentral number, so customers see your business, not a generic shortcode.
+  </Accordion>
+  <Accordion title="Can I refund a text-to-pay payment?">
+    Yes. Refunds are handled from the invoice, just like any other card payment. See [refunds](/payments/refunds).
+  </Accordion>
+  <Accordion title="What if the customer does not pay right away?">
+    The invoice stays open and you can resend the link or enable automatic [reminders](/payments/reminders) to follow up.
+  </Accordion>
+</AccordionGroup>
+
+If you run into trouble, reach out to the Revenue Sol team at Infinite Rankers LLC at contact@infiniterankers.io.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Invoices" href="/payments/invoices">
+    Create and send invoices that customers can pay by text.
+  </Card>
+  <Card title="Connect Stripe" href="/integrations/stripe">
+    Set up card processing so you can collect payments.
+  </Card>
+  <Card title="Payment reminders" href="/payments/reminders">
+    Automatically follow up on unpaid invoices.
+  </Card>
+</CardGroup>

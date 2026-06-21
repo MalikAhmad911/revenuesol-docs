@@ -1,0 +1,86 @@
+---
+title: "Payment links"
+description: "Share a link to collect any payment."
+---
+
+Payment links let you collect money without building a full invoice. Use them to take a deposit before you schedule a job, charge a one-off fee, or capture a quick balance — then send the link by text or email and let the customer pay by card.
+
+## When to use a payment link
+
+A payment link is the fastest way to get paid when an invoice would be overkill. Reach for one when you want to:
+
+- Collect a deposit before booking a job or ordering materials.
+- Charge a flat one-off fee (a service call, a diagnostic, a rush surcharge).
+- Take payment over the phone while the customer is still on the line.
+- Share a reusable link in a quote, email signature, or text reply.
+
+<Note>
+Payments are processed through Stripe, so you'll need a connected Stripe account before you can create a link. See [Accepting payments](/payments/accepting-payments) to connect Stripe.
+</Note>
+
+## Create a payment link
+
+<Steps>
+<Step title="Open Payments and start a new link">
+From the Payments area, choose to create a new payment link. You can also start one directly from a contact so it's tied to the right customer.
+</Step>
+<Step title="Set the amount and description">
+Enter the amount you want to collect and a short description the customer will see at checkout, such as "Deposit for AC install" or "Service call fee."
+</Step>
+<Step title="Attach a customer (optional)">
+Link the payment to a contact in your [CRM](/crm/contacts) so the payment is recorded against their record once it's paid.
+</Step>
+<Step title="Generate and share">
+Create the link, then copy it or send it straight to the customer by SMS or email. The customer opens the link, enters their card details, and pays securely.
+</Step>
+</Steps>
+
+<Tip>
+For an even faster checkout, send the link by text using [text-to-pay](/payments/text-to-pay). Most customers pay within minutes of getting the message on their phone.
+</Tip>
+
+## What the customer sees
+
+When the customer opens the link, they get a clean, mobile-friendly checkout page showing your business name, the amount, and the description you entered. They pay by card without creating an account or logging in. Once payment clears, the funds settle to your connected Stripe account on Stripe's normal payout schedule.
+
+## After a payment is made
+
+Paid links are tracked alongside your other payments so you always know what's been collected. You can:
+
+- See the payment recorded on the linked contact's record.
+- View it in your payments list and [analytics](/analytics/reports).
+- Issue a [refund](/payments/refunds) if you need to return the money.
+
+## Payment links vs. invoices
+
+<AccordionGroup>
+<Accordion title="When should I send an invoice instead?">
+Use an [invoice](/payments/invoices) when you need line items, itemized products, taxes, or a formal record the customer can keep. A payment link is best for a single quick amount with no line-item detail.
+</Accordion>
+<Accordion title="Can I collect a deposit and invoice the balance later?">
+Yes. Use a payment link to take the deposit up front, then send a full invoice for the remaining balance once the work is scheduled or completed.
+</Accordion>
+<Accordion title="Can I reuse the same link?">
+A payment link can be shared with more than one person, which is useful for a standard flat fee. For amounts tied to a specific customer, create a fresh link each time so payments stay matched to the right contact.
+</Accordion>
+</AccordionGroup>
+
+<Warning>
+Always double-check the amount before sharing a link. Once a customer pays, the only way to reverse the charge is to issue a refund.
+</Warning>
+
+Need a hand setting up payments? Reach the team at contact@infiniterankers.io.
+
+## Next steps
+
+<CardGroup cols={2}>
+<Card title="Text-to-pay" href="/payments/text-to-pay">
+Send payment requests by SMS and get paid in minutes.
+</Card>
+<Card title="Invoices" href="/payments/invoices">
+Build itemized invoices when you need a full record.
+</Card>
+<Card title="Refunds" href="/payments/refunds">
+Return a payment when you need to reverse a charge.
+</Card>
+</CardGroup>

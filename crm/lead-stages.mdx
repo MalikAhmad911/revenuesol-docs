@@ -1,0 +1,73 @@
+---
+title: "Lead stages"
+description: "Define the steps a lead moves through."
+---
+
+Lead stages are the named steps a lead moves through on its way to becoming a won job. They turn your pipeline into a clear, repeatable process so you always know what to do next and where every opportunity stands.
+
+## How stages work
+
+Every lead in Revenue Sol sits in exactly one stage at a time. Stages are the columns of your pipeline board, ordered from first contact through to a closed outcome. A typical home-service pipeline looks something like New, Contacted, Quoted, Scheduled, and Won, with a Lost stage for leads that don't convert.
+
+As work progresses, you move a lead forward by dragging its card to the next column on the pipeline board, or by changing the stage field on the lead's detail page. The lead keeps all of its history, contact details, notes, tasks, and linked conversations as it moves, so nothing is lost in the handoff.
+
+Because each lead carries a single stage, your board gives you an at-a-glance read on pipeline health: how many leads are stuck at Quoted, how many are ready to schedule, and where deals are stalling. Those same stage counts feed your pipeline reports in [Analytics](/analytics/reports).
+
+<Tip>
+Keep your stage list short and action-oriented. A stage should answer "what needs to happen next?" If two stages always get the same follow-up, merge them.
+</Tip>
+
+## Customizing your stages
+
+You can tailor stages to match how your business actually sells. Revenue Sol ships with sensible defaults, and you can rename, reorder, add, or remove stages so the pipeline mirrors your real workflow.
+
+<Steps>
+  <Step title="Open your pipeline settings">
+    Go to the pipeline where you manage leads and open its stage configuration. If you run more than one pipeline (for example, residential versus commercial), each can have its own stages.
+  </Step>
+  <Step title="Add or rename stages">
+    Create the steps your team follows, using plain names everyone understands. Drag stages into the order that matches your process.
+  </Step>
+  <Step title="Mark won and lost outcomes">
+    Designate which stages represent a won deal and which represent a lost one so your conversion and win-rate reporting stays accurate.
+  </Step>
+  <Step title="Save and apply">
+    Save your changes. Existing leads stay in their current stage; only leads you move afterward reflect the new layout.
+  </Step>
+</Steps>
+
+<Warning>
+Removing a stage that still has leads in it requires moving those leads first. Reassign or advance any open leads before deleting a stage so none are orphaned.
+</Warning>
+
+## Triggering automations on stage changes
+
+The real power of stages comes from connecting them to your [automations engine](/marketing/automations). A stage change is a trigger: when a lead enters a particular stage, Revenue Sol can fire actions automatically, so routine follow-up happens without anyone remembering to do it.
+
+Common stage-based automations for home-service teams include:
+
+- Send a text or email the moment a lead moves to **Contacted**, confirming you received their request.
+- Create a follow-up task for the rep when a lead lands in **Quoted** but doesn't advance within a few days.
+- Trigger a [quote](/quotes/estimates) or scheduling link when a lead reaches **Scheduled**.
+- Kick off a Google [review request](/reputation/review-requests) once a lead is marked **Won** and the job is complete.
+- Move a lead to a re-engagement campaign when it's marked **Lost**.
+
+<Note>
+Build these in the automations engine by choosing a "lead stage changed" trigger, selecting the target stage, and adding actions such as send message, create task, or add to campaign.
+</Note>
+
+To set up your first stage-driven workflow, pick one repetitive follow-up your team does by hand and automate it. If you need help mapping your sales process to stages and triggers, contact the Revenue Sol team at contact@infiniterankers.io — Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Automations" href="/marketing/automations">
+    Trigger messages, tasks, and campaigns when a lead changes stage.
+  </Card>
+  <Card title="Leads" href="/crm/leads">
+    Manage the leads that move through your pipeline.
+  </Card>
+  <Card title="Pipeline reports" href="/analytics/reports">
+    See conversion and win rates across every stage.
+  </Card>
+</CardGroup>

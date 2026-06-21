@@ -1,0 +1,87 @@
+---
+title: "Making & receiving calls"
+description: "Place and take calls inside Revenue Sol."
+---
+
+Revenue Sol turns your business phone number into a full calling experience right inside the app. You place and answer calls from the browser or the mobile app, every call is logged against the right contact, and your AI receptionist can cover anything you miss. Calls and texts run on your own Twilio or RingCentral number, billed at carrier cost with no markup.
+
+## Place a call
+
+You can call any contact without leaving the conversation view. The in-app softphone uses your connected number, so caller ID shows your business line.
+
+<Steps>
+  <Step title="Open the contact or conversation">
+    Find the customer in your [unified inbox](/inbox/overview) or open their record in the [CRM](/crm/contacts).
+  </Step>
+  <Step title="Start the call">
+    Use the call action on the contact to dial. Revenue Sol places the call through your connected Twilio or RingCentral number.
+  </Step>
+  <Step title="Talk and wrap up">
+    When the call ends, the call is automatically recorded in the contact's timeline so your team has full context next time.
+  </Step>
+</Steps>
+
+<Tip>
+On the [mobile app](/mobile/overview), field techs can place and receive calls on the go, with the same logging and caller ID as the desktop softphone.
+</Tip>
+
+## Receive a call
+
+Incoming calls ring through to the app when you are online. You see who is calling, along with their history, so you can answer with context instead of starting cold. Answered calls drop straight into the conversation view alongside SMS, email, and web-form messages, keeping the entire relationship in one thread.
+
+<Note>
+Your phone number is brought in through your own [Twilio or RingCentral integration](/integrations/phone). Make sure a number is connected and selected before you expect calls to route into Revenue Sol.
+</Note>
+
+## Call logging
+
+Every call, inbound and outbound, is logged against the contact automatically. You get a running history of when you talked, how long, and the direction of the call, all attached to the customer record. That means anyone on your team can open a contact and instantly see the last conversation, whether it happened by phone, text, or email.
+
+You can also add [notes](/crm/notes) to a contact after a call to capture details like quote follow-ups or scheduling preferences.
+
+## Voicemail
+
+When you cannot pick up, callers can leave a voicemail. Voicemails land in the inbox attached to the contact, so a missed call never becomes a lost lead. Your team can listen, follow up by call or text, and keep the thread moving without digging through a separate voicemail system.
+
+## AI receptionist for overflow and after-hours
+
+The thing that sets Revenue Sol apart is what happens when no one answers. The 24/7 AI receptionist picks up calls you miss, including overflow during busy hours and calls that come in after-hours, on weekends, or on holidays.
+
+The AI receptionist can:
+
+- Answer the call in a natural voice and represent your business
+- Capture caller details and the reason for the call
+- Book jobs directly into your calendar around the clock
+- Hand off or create a lead so you can follow up
+
+<Warning>
+The AI receptionist only answers the calls you do not pick up. When you are available and answer in-app, the call connects to you as normal.
+</Warning>
+
+To set the receptionist's behavior, hours, and what it says, see the voice configuration docs below. The receptionist draws on your [Knowledge Hub](/ai/knowledge-hub) so its answers reflect your real services, pricing, and FAQs.
+
+<AccordionGroup>
+  <Accordion title="What number do calls come from?">
+    Your own connected Twilio or RingCentral number. Calls and texts are billed at carrier cost with no markup from Revenue Sol.
+  </Accordion>
+  <Accordion title="Are calls recorded against the right customer?">
+    Yes. Inbound and outbound calls are matched to the contact and logged on their timeline automatically.
+  </Accordion>
+  <Accordion title="Can the AI book a job during a call?">
+    Yes. The AI receptionist can book jobs directly onto your [calendar](/jobs/calendar) while it has the caller on the line.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="AI receptionist & voice" href="/ai/voice">
+    Configure how your 24/7 AI receptionist answers, books, and after-hours behavior.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    See calls, SMS, email, and web-form leads in one conversation view.
+  </Card>
+  <Card title="Connect your phone number" href="/integrations/phone">
+    Bring your Twilio or RingCentral number into Revenue Sol.
+  </Card>
+</CardGroup>

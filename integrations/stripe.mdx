@@ -1,62 +1,97 @@
 ---
 title: "Stripe"
-description: "How Revenue Sol uses Stripe to collect card payments."
+description: "Accept payments with Stripe."
 ---
 
-Revenue Sol uses Stripe to process **card payments** — the engine behind text-to-pay links, invoices, deposits, and recurring billing. Customers pay on a secure, Stripe-hosted checkout page, and payments are confirmed back to Revenue Sol automatically.
+Stripe is how Revenue Sol processes card payments, so you can get paid faster without chasing checks or invoices. Once connected, you can collect card payments, send text-to-pay links, and run recurring billing directly from your CRM. Card-processing fees are billed by Stripe at their standard rates.
 
-## What Stripe powers
+## Connect your Stripe account
 
-<CardGroup cols={2}>
-  <Card title="Text-to-pay links" icon="message-dollar">
-    Secure checkout links you send by text or email.
-  </Card>
-  <Card title="Invoices & deposits" icon="file-invoice-dollar">
-    Collect full payments or up-front deposits.
-  </Card>
-  <Card title="Recurring billing" icon="rotate">
-    Charge maintenance plans on a schedule.
-  </Card>
-  <Card title="Refunds" icon="rotate-left">
-    Process refunds that reflect back in the CRM.
-  </Card>
-</CardGroup>
-
-## How it works
+You connect Stripe once, and every payment surface in Revenue Sol starts working. If you don't already have a Stripe account, you can create one during the connection flow.
 
 <Steps>
-  <Step title="You create a payment request">
-    From an invoice, quote, or job, Revenue Sol creates a payment request and a secure checkout link.
+  <Step title="Open your integration settings">
+    Go to your workspace settings and find the Integrations or Payments area, then choose Stripe.
   </Step>
-  <Step title="The customer pays">
-    They open the link and pay by card on Stripe's hosted checkout — no account needed.
+  <Step title="Start the connection">
+    Select Connect Stripe. You'll be redirected to Stripe to either sign in to an existing account or create a new one.
   </Step>
-  <Step title="Revenue Sol is notified">
-    Stripe sends a signed event to Revenue Sol's webhook, which marks the payment captured and updates the invoice.
+  <Step title="Complete Stripe's onboarding">
+    Stripe asks for your business details, bank account, and tax information so it can verify you and enable payouts. This is required before you can accept live payments.
+  </Step>
+  <Step title="Return to Revenue Sol">
+    After approval, you're redirected back and Stripe shows as connected. You're ready to collect payments.
   </Step>
 </Steps>
 
 <Note>
-Technical reference: Stripe events are received at `/api/webhooks/stripe` (verified with the Stripe signature). Handled events include `checkout.session.completed`, `payment_intent.succeeded`, `charge.refunded`, `invoice.paid`, and subscription lifecycle events. See [Webhooks](/developers/webhooks).
+  Revenue Sol never sees or stores your customers' card numbers. Card details are handled entirely by Stripe on its secure, PCI-compliant checkout.
 </Note>
 
-## Security
+## Accept card payments
 
-<Info>
-Card details are handled entirely by **Stripe** on their secure checkout — Revenue Sol never sees or stores raw card numbers. Each payment link is single-purpose, valid only for the specific payment request it was created for.
-</Info>
+With Stripe connected, customers can pay invoices and quotes by card on the secure, Stripe-hosted checkout page that Revenue Sol generates. You can collect a payment in a few ways:
+
+- **Payment links** you send by text or email that open a hosted checkout page.
+- **Text-to-pay**, where the customer receives an SMS with a tappable link and pays from their phone in seconds.
+- **Manual card entry** for taking a card over the phone or in person.
+
+See [Invoices](/payments/invoices) and [Payments](/payments) for how to send and track each payment.
+
+## Text-to-pay
+
+Text-to-pay is the fastest way to close out a completed job. From an invoice, send the customer a payment link by SMS using the phone number you connected through Twilio or RingCentral. The customer taps the link, enters their card, and the invoice is marked paid automatically. No app download or account is required on their end.
+
+<Tip>
+  Text-to-pay works best right after the technician finishes the job, while the customer is still on site. Pair it with an automation so the request goes out the moment a job is marked complete.
+</Tip>
+
+## Recurring billing
+
+For maintenance plans, service agreements, or any subscription-style billing, you can set up recurring payments through Stripe. Save a customer's card on file with their consent, set the amount and cadence, and Revenue Sol charges the card automatically on schedule. This is ideal for HVAC tune-up plans, pest-control contracts, and recurring cleaning services.
+
+## Payouts
+
+Stripe deposits your collected funds directly into the bank account you added during onboarding. Payout timing and any holds are controlled by Stripe, not Revenue Sol. To review payout schedules, transfers, and processing fees, open your Stripe Dashboard, where each deposit is itemized against the payments that funded it.
 
 <Warning>
-Revenue Sol also supports **Square** as a payment processor. Your account is configured to use the processor set up for your business — you don't need both.
+  Disputes, refunds, and chargebacks are handled through Stripe. Refunds you issue in Revenue Sol are sent to Stripe to process and may take several business days to reach the customer.
 </Warning>
 
-## Related
+## Where payments appear
+
+Every transaction stays visible inside Revenue Sol so your records match what's in Stripe:
+
+- Paid, pending, and failed payments show on the related [invoice](/payments/invoices).
+- A full transaction history lives in your [Payments](/payments) area.
+- Revenue from payments feeds your [reports and analytics](/analytics) so you can track collections over time.
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My Stripe account shows as not connected">
+    Reopen the Stripe integration and reconnect. If Stripe's onboarding wasn't fully completed, finish the remaining verification steps in your Stripe Dashboard, then return to Revenue Sol.
+  </Accordion>
+  <Accordion title="A payment succeeded in Stripe but the invoice still shows unpaid">
+    Allow a moment for the two systems to sync. If the status doesn't update, contact support so we can reconcile the payment to the correct invoice.
+  </Accordion>
+  <Accordion title="When will I receive my money?">
+    Payout timing is set by Stripe based on your account and region. Check the Payouts section of your Stripe Dashboard for the exact schedule.
+  </Accordion>
+</AccordionGroup>
+
+Need a hand connecting Stripe? Email the Revenue Sol team at contact@infiniterankers.io and we'll help you get set up.
+
+## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Payments & Invoices" icon="credit-card" href="/guides/payments">
-    Create invoices and send text-to-pay links.
+  <Card title="Payments" href="/payments">
+    Send payment links, take card payments, and track every transaction.
   </Card>
-  <Card title="QuickBooks" icon="book" href="/integrations/quickbooks">
-    Sync payments to your accounting.
+  <Card title="Invoices" href="/payments/invoices">
+    Create invoices and collect payment with text-to-pay.
+  </Card>
+  <Card title="QuickBooks" href="/integrations/quickbooks">
+    Sync your payments and invoices to your accounting.
   </Card>
 </CardGroup>

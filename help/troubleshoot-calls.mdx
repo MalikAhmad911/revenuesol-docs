@@ -1,0 +1,82 @@
+---
+title: "Troubleshooting calls"
+description: "Fix calling and receptionist issues."
+---
+
+When calls are not coming through or your AI receptionist is not answering the way you expect, the problem almost always traces back to one of a few causes: a number that is not fully connected, routing rules that send calls the wrong way, the AI receptionist being turned off, or a temporary audio glitch. Work through the checks below in order and you will resolve most issues without needing to contact support.
+
+<Note>
+Revenue Sol uses your own Twilio or RingCentral number for calls and texts, billed at carrier cost with no markup. Most call problems start at the connection between Revenue Sol and that provider. If you are still setting things up, see [Voice setup](/voice/setup) first.
+</Note>
+
+## Start with the connection checks
+
+Before changing any settings, confirm the basics. Many "broken" calls are simply a number that disconnected from your provider.
+
+<Steps>
+  <Step title="Check your number status">
+    Open your voice or phone settings and confirm your Twilio or RingCentral number shows as connected. A number that displays as disconnected, expired, or pending will not receive calls.
+  </Step>
+  <Step title="Reauthorize the integration">
+    If the connection looks broken, reconnect Twilio or RingCentral. Tokens and webhooks can expire, which silently stops inbound calls and texts. Reauthorizing restores the link.
+  </Step>
+  <Step title="Place a test call">
+    Call your business number from a different phone. Listen for whether it rings, goes to the AI receptionist, or fails immediately. The result tells you which area to investigate next.
+  </Step>
+</Steps>
+
+## Calls are not routing
+
+If a test call rings out, fails, or reaches the wrong destination, the issue is usually in your routing rules.
+
+- Confirm the number receiving calls is the one connected to Revenue Sol, not an old line still pointed at voicemail elsewhere.
+- Review your business hours and any after-hours rules. A call placed outside open hours may be handled differently than you expect.
+- Check that forwarding on your carrier or phone provider is not intercepting calls before they reach Revenue Sol.
+
+<Warning>
+If you recently switched providers or ported a number, calls may route to the old destination until the change fully propagates. Confirm the number in Revenue Sol matches the active line before troubleshooting further.
+</Warning>
+
+## The AI receptionist is not answering
+
+The 24/7 AI receptionist answers calls only when it is enabled and your account has available AI credits.
+
+- Verify the AI receptionist is turned on for the connected number.
+- Confirm your account has AI credits available. AI is included on every plan, but heavy usage can draw credits down.
+- Check that your Retell voice connection is active, since the AI receptionist relies on it to speak and listen.
+- Make sure your Knowledge Hub has been trained on your website or FAQs so the AI has answers to give callers.
+
+<Tip>
+If the AI answers but gives weak or wrong responses, the fix is usually content, not configuration. Update your Knowledge Hub and business details so the receptionist has accurate information to work from.
+</Tip>
+
+## Audio problems
+
+Choppy, one-way, or silent audio is typically a network or device issue rather than a Revenue Sol setting.
+
+<AccordionGroup>
+  <Accordion title="Callers hear silence or robotic audio">
+    This usually points to a weak or unstable internet connection on the receiving side. Test on a stronger network and retry the call.
+  </Accordion>
+  <Accordion title="One side cannot hear the other">
+    One-way audio is often a firewall or device microphone permission issue. Check that the device handling calls has microphone access and is not behind a restrictive network.
+  </Accordion>
+  <Accordion title="Calls drop after connecting">
+    Frequent drops point to your carrier or provider. Confirm the Twilio or RingCentral number is healthy and not rate-limited or flagged.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+If calls still fail after these checks, gather the date, time, and phone number of a failed call and contact our team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC, and the support team can review your provider connection and routing directly.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Voice setup" href="/voice/setup">
+    Connect your number and configure the AI receptionist from the start.
+  </Card>
+  <Card title="Unified inbox" href="/inbox">
+    See where calls, texts, and emails land in one conversation view.
+  </Card>
+</CardGroup>

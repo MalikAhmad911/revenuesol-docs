@@ -1,0 +1,91 @@
+---
+title: "Retell (voice AI)"
+description: "Power the voice receptionist with Retell."
+---
+
+Retell is the voice AI engine behind your 24/7 AI receptionist in Revenue Sol. When a customer calls your business number, Retell handles the live conversation in natural speech: it answers, understands questions, books jobs, and captures messages around the clock. This page explains how the integration works, how to connect and configure it, and how to test it before you go live.
+
+## How Retell powers your AI receptionist
+
+Your AI receptionist combines three pieces that work together:
+
+- **Your phone number** from Twilio or RingCentral, which routes inbound calls to Revenue Sol.
+- **Retell**, which turns those calls into real-time voice conversations using speech recognition, AI reasoning, and natural-sounding text-to-speech.
+- **Your Knowledge Hub**, which trains the agent on your website, services, hours, and FAQs so it answers accurately for your business.
+
+When a call comes in, the audio is streamed to Retell, the agent responds in conversation, and the resulting transcript, recording, and any booked job flow back into your [unified inbox](/inbox/overview) and [CRM](/crm/contacts). Calls and texts are billed at your carrier's cost with no markup; AI is included on every Revenue Sol plan.
+
+<Info>
+You do not need a separate Retell account to get started. Revenue Sol manages the Retell connection for you as part of the AI receptionist setup.
+</Info>
+
+## Connect and configure Retell
+
+<Steps>
+<Step title="Connect a phone number">
+Bring your own Twilio or RingCentral number and connect it in Revenue Sol so inbound calls can reach the AI receptionist. See [Twilio setup](/integrations/twilio) or [RingCentral setup](/integrations/ringcentral) for the details.
+</Step>
+<Step title="Enable the voice AI agent">
+Open the voice settings for your workspace and turn on the AI receptionist. This links your number to the Retell voice agent.
+</Step>
+<Step title="Train the Knowledge Hub">
+Add your website URL, services, business hours, and common questions to the [Knowledge Hub](/ai/knowledge-hub). The more context you provide, the more accurately the agent answers and books.
+</Step>
+<Step title="Set the agent's voice and behavior">
+Choose a voice, greeting, and the actions the agent can take such as booking jobs, capturing lead details, and routing or escalating to a person when needed.
+</Step>
+</Steps>
+
+For the full walkthrough of greetings, voices, and call handling rules, follow the [voice setup guide](/ai/voice-setup).
+
+<Tip>
+Keep your Knowledge Hub current. After you change pricing, hours, or service areas, update it so the AI receptionist never quotes stale information to a caller.
+</Tip>
+
+## Test your voice agent
+
+Before relying on the AI receptionist for live customers, place a few test calls to your connected number and confirm the experience end to end.
+
+<Steps>
+<Step title="Place a test call">
+Call your business number from a phone and interact with the agent as a real customer would. Try a booking request, a pricing question, and an after-hours scenario.
+</Step>
+<Step title="Review the conversation">
+Check that the call, transcript, and recording appear in your [inbox](/inbox/overview), and that any job or lead the agent created landed correctly in your CRM.
+</Step>
+<Step title="Refine and repeat">
+If an answer was wrong or a booking was missed, adjust the Knowledge Hub or voice settings, then test again until the agent behaves the way you want.
+</Step>
+</Steps>
+
+<Warning>
+Always run a live test call after connecting a new number or changing voice settings. This confirms call routing, the agent's greeting, and job booking are all working before customers reach the AI receptionist.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+<Accordion title="The AI receptionist did not answer my call">
+Confirm your Twilio or RingCentral number is connected and that the AI receptionist is enabled in your voice settings. If the number was just connected, allow a few minutes and place another test call.
+</Accordion>
+<Accordion title="The agent gave an inaccurate answer">
+The agent answers from your Knowledge Hub. Add or correct the relevant information, then place a fresh test call to verify the new answer.
+</Accordion>
+<Accordion title="I still need help">
+Reach out to the Revenue Sol team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+</Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+<Card title="Voice setup" href="/ai/voice-setup">
+Configure greetings, voices, and call handling for your AI receptionist.
+</Card>
+<Card title="Knowledge Hub" href="/ai/knowledge-hub">
+Train your AI on your website, services, and FAQs.
+</Card>
+<Card title="Unified inbox" href="/inbox/overview">
+See calls, texts, and transcripts in one conversation view.
+</Card>
+</CardGroup>

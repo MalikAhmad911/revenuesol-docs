@@ -1,0 +1,104 @@
+---
+title: "Message templates"
+description: "Reuse polished messages across channels."
+---
+
+Message templates let you save your best-performing email and SMS copy once and reuse it everywhere in Revenue Sol. Instead of rewriting the same appointment confirmation or follow-up from scratch, you build a template with personalization variables and drop it into campaigns, automations, or a manual reply in seconds.
+
+## Why use templates
+
+Templates keep your messaging consistent across your whole team and every channel. They reduce typos, speed up replies in the [unified inbox](/channels/inbox), and make sure customers always get the same polished tone whether the message comes from you, a dispatcher, or an automation.
+
+<Info>
+Templates work alongside your AI Employee and Knowledge Hub. Templates give you exact, controlled wording for repeatable messages, while the AI handles open-ended conversations.
+</Info>
+
+## Create a template
+
+<Steps>
+  <Step title="Open the templates area">
+    Go to your messaging settings and choose to create a new template. Pick whether it's an email or SMS template, since the editor and length limits differ between channels.
+  </Step>
+  <Step title="Name it clearly">
+    Give the template a descriptive name like "Appointment confirmation" or "Quote follow-up" so your team can find it quickly later.
+  </Step>
+  <Step title="Write the message">
+    For email, add a subject line and body. For SMS, keep it concise to avoid splitting into multiple segments, which can increase carrier costs on your connected Twilio or RingCentral number.
+  </Step>
+  <Step title="Insert variables">
+    Add personalization variables (merge fields) where you want customer or business details to appear automatically.
+  </Step>
+  <Step title="Save and reuse">
+    Save the template. It's now available to select anywhere messages are sent.
+  </Step>
+</Steps>
+
+## Personalization variables
+
+Variables pull live data from a contact, job, or your business profile and fill it in when the message is sent. Common variables include the customer's first name, your business name, appointment date and time, and links such as a quote or payment link.
+
+<Tip>
+Always include a fallback or double-check that the data exists. If a contact has no first name on file, a greeting like "Hi {'{{'}first_name{'}}'}" can look broken. Keep variable usage to fields you reliably collect.
+</Tip>
+
+When a message goes out, every variable is replaced with that recipient's real values, so a single template produces a personalized message for each customer.
+
+## Where templates are used
+
+<CardGroup cols={2}>
+  <Card title="Campaigns" href="/marketing/campaigns">
+    Select a template as the starting point for SMS or email campaigns, including A/B test variants.
+  </Card>
+  <Card title="Automations" href="/marketing/automations">
+    Trigger templated messages from recipes and workflow triggers, like sending a confirmation when a job is booked.
+  </Card>
+  <Card title="Manual replies" href="/channels/inbox">
+    Insert a template into a conversation in the unified inbox, then edit before you send.
+  </Card>
+  <Card title="Reminders" href="/jobs/reminders">
+    Use templates for appointment reminders and on-the-way notifications.
+  </Card>
+</CardGroup>
+
+In every case the template is a starting point. You can edit the text after inserting it, so you keep speed without losing the ability to add a personal touch.
+
+## Best practices
+
+- Keep SMS short and front-load the important details; long messages split into multiple segments billed at carrier cost.
+- Always include an opt-out path in marketing SMS to stay compliant.
+- Test a template by sending it to yourself before using it in a live campaign.
+- Review templates periodically so dates, offers, and links stay current.
+
+<Warning>
+SMS marketing in the US is subject to carrier and TCPA rules. Make sure recipients have consented and that promotional templates include clear opt-out language.
+</Warning>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I use the same template for email and SMS?">
+    No. Email templates have a subject and richer formatting, while SMS templates are plain text with strict length considerations. Create a version for each channel.
+  </Accordion>
+  <Accordion title="What happens if a variable has no value?">
+    The variable is replaced with whatever data exists on the contact. Missing fields can leave gaps, so only use variables for data you reliably collect, and proofread before bulk sends.
+  </Accordion>
+  <Accordion title="Who can create and edit templates?">
+    Team members with the appropriate permissions can manage templates so the whole team shares consistent, approved messaging.
+  </Accordion>
+</AccordionGroup>
+
+Need help building your first set of templates? Reach out to Infinite Rankers LLC at contact@infiniterankers.io.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="SMS & email campaigns" href="/marketing/campaigns">
+    Send templated broadcasts with A/B testing to your contacts and segments.
+  </Card>
+  <Card title="Automations" href="/marketing/automations">
+    Build trigger-based workflows that send your templates automatically.
+  </Card>
+  <Card title="Unified inbox" href="/channels/inbox">
+    Reply to calls, texts, email, and web leads from one conversation view.
+  </Card>
+</CardGroup>

@@ -1,68 +1,104 @@
 ---
 title: "Google"
-description: "Connect Google to track search rankings, view analytics, and manage your online presence."
+description: "Connect Google Business Profile and analytics."
 ---
 
-Connecting Google gives Revenue Sol access to your **Search Console** and **Analytics (GA4)** data, so you can track how customers find you and how your website performs — right alongside your leads and revenue.
+Connecting Google lets Revenue Sol power two distinct workflows for your home-service business: automatically requesting and replying to Google reviews, and pulling web traffic and search data into your reports. Each workflow uses its own connection and its own set of permissions, so you can enable just the parts you need.
 
-## What connecting Google enables
+## What you can connect
 
 <CardGroup cols={2}>
-  <Card title="Search Console" icon="magnifying-glass">
-    Track keyword rankings, impressions, and clicks.
+  <Card title="Google Business Profile" icon="star">
+    Authorizes Revenue Sol to send post-job review requests, monitor new reviews, and post AI-written replies on your behalf.
   </Card>
-  <Card title="Analytics (GA4)" icon="chart-line">
-    See website traffic and engagement.
-  </Card>
-  <Card title="URL indexing" icon="link">
-    Request indexing of important pages in Search Console.
-  </Card>
-  <Card title="Property selection" icon="list-check">
-    Choose which sites and analytics streams to track.
+  <Card title="Web analytics" icon="chart-line">
+    Connects Google Search Console and Google Analytics 4 (GA4) so search and traffic data appears in your analytics dashboards.
   </Card>
 </CardGroup>
 
-## Before you start
+## Connect Google Business Profile
 
-<Note>
-You'll need a **Google account** with access to a Search Console property and/or a GA4 property. Revenue Sol connects via Google's secure OAuth.
-</Note>
-
-## Connect Google
+Linking your Google Business Profile turns on automated reputation tools: requests go out after a completed job, and you can have AI draft replies to incoming reviews for your approval.
 
 <Steps>
-  <Step title="Open Settings → Integrations → Google">
-    Find the Google integration (also reachable from the Analytics area).
+  <Step title="Open the Google integration">
+    Go to your integrations settings and choose Google.
   </Step>
-  <Step title="Click Connect Google">
-    You'll be sent to Google's consent screen.
+  <Step title="Sign in with Google">
+    Sign in with the Google account that manages your Business Profile and grant the requested permissions.
   </Step>
-  <Step title="Grant access">
-    Approve read access to Search Console and Analytics.
+  <Step title="Select your business location">
+    If your account manages more than one location, pick the one you want Revenue Sol to manage reviews for.
   </Step>
-  <Step title="Select properties">
-    Choose which Search Console properties and GA4 streams Revenue Sol should track.
-  </Step>
-  <Step title="Data syncs">
-    Your rankings and analytics populate in the dashboard. You can trigger a manual sync anytime.
+  <Step title="Confirm review settings">
+    Review how and when post-job requests are sent, then save.
   </Step>
 </Steps>
 
-## Analytics in Revenue Sol
+<Note>
+You must be an owner or manager of the Google Business Profile you want to connect. Profiles you only have view access to will not appear as options.
+</Note>
 
-Once connected, your Search Console and GA4 data appear in the Analytics dashboards, so you can see search performance and site engagement next to your CRM activity. You can also export analytics reports to PDF.
+When connected, Revenue Sol requests a Business Profile permission scope that lets it read your reviews and post replies. For details on request timing and AI replies, see [Reputation](/reputation/reviews).
+
+## Connect web analytics
+
+The analytics connection is read-only and separate from reviews. It brings Search Console and GA4 metrics into Revenue Sol so you can see traffic, queries, and conversion trends alongside your pipeline and communication reports.
+
+<Steps>
+  <Step title="Start the analytics connection">
+    In integrations, choose to connect Google analytics.
+  </Step>
+  <Step title="Grant read access">
+    Sign in and approve read-only access to your Search Console and GA4 properties.
+  </Step>
+  <Step title="Choose your properties">
+    Select the Search Console site and the GA4 property that match your website.
+  </Step>
+</Steps>
 
 <Tip>
-Connect Google early so you build a history of search and traffic data — trends are far more useful than a single snapshot.
+Connect analytics with the same Google account that already owns your Search Console and GA4 properties. If your website was set up by an agency, ask them to grant your account access first.
 </Tip>
 
-## Related
+Once linked, your data flows into the analytics area. Learn what reports are available in [Web analytics](/analytics/web-analytics).
+
+## Permissions at a glance
+
+Revenue Sol only requests the minimum access each feature needs:
+
+- **Business Profile** uses a reviews scope to read reviews and post replies. It does not change your business hours, photos, or other profile fields.
+- **Analytics** uses read-only Search Console and GA4 scopes. Revenue Sol never modifies your analytics configuration or website.
+
+<Warning>
+You can disconnect Google at any time from your integrations settings, or revoke access directly in your Google Account security settings. Disconnecting stops review automation and pauses analytics data collection.
+</Warning>
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My business location isn't listed">
+    Confirm you signed in with the Google account that owns or manages the profile, and that the profile is verified in Google. Manager-level access is required.
+  </Accordion>
+  <Accordion title="Analytics data isn't showing up">
+    Make sure you selected both a Search Console site and a GA4 property during setup, and allow time for the first data sync. Verify the connected account has access to those properties.
+  </Accordion>
+  <Accordion title="I need both reviews and analytics">
+    These are independent connections. Complete each setup flow separately so both features are enabled.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+Need a hand connecting Google? Reach the team at Infinite Rankers LLC at contact@infiniterankers.io.
+</Info>
+
+## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Reviews" icon="star" href="/guides/reviews">
-    Grow your Google reviews automatically.
+  <Card title="Reputation" href="/reputation/reviews">
+    Set up post-job review requests and AI-written replies.
   </Card>
-  <Card title="Quickstart" icon="rocket" href="/quickstart">
-    Finish setting up your workspace.
+  <Card title="Web analytics" href="/analytics/web-analytics">
+    Explore search and traffic reports from Search Console and GA4.
   </Card>
 </CardGroup>

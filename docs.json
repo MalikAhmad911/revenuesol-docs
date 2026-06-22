@@ -116,7 +116,74 @@
             "group": "Reviews & Reputation",
             "pages": [
               "reviews/overview",
-              "reviews/auto-requests"
+              "reviews/auto-requests",
+              "reviews/ai-replies",
+              "reviews/google-business-profile",
+              "reviews/monitoring"
+            ]
+          },
+          {
+            "group": "Marketing & Automation",
+            "pages": [
+              "marketing/overview",
+              "marketing/sms-campaigns",
+              "marketing/email-campaigns",
+              "marketing/ab-testing",
+              "marketing/automations",
+              "marketing/automation-recipes"
+            ]
+          },
+          {
+            "group": "Channels",
+            "pages": [
+              "channels/email-setup",
+              "channels/imap-smtp",
+              "channels/templates",
+              "channels/social-overview",
+              "channels/connect-social"
+            ]
+          },
+          {
+            "group": "Analytics",
+            "pages": [
+              "analytics/overview",
+              "analytics/pipeline-reports",
+              "analytics/communication-reports",
+              "analytics/web-analytics",
+              "analytics/export-data"
+            ]
+          },
+          {
+            "group": "Mobile App",
+            "pages": [
+              "mobile/overview",
+              "mobile/install-android",
+              "mobile/install-ios",
+              "mobile/push-notifications"
+            ]
+          },
+          {
+            "group": "Account & Billing",
+            "pages": [
+              "account/plans-pricing",
+              "account/billing-invoices",
+              "account/ai-credits-topups",
+              "account/team-roles",
+              "account/business-settings",
+              "account/security-data"
+            ]
+          },
+          {
+            "group": "Help & Troubleshooting",
+            "pages": [
+              "help/faq",
+              "help/troubleshoot-sms",
+              "help/troubleshoot-calls",
+              "help/billing-faq",
+              "help/data-import-export",
+              "help/cancel-account",
+              "help/status-uptime",
+              "help/contact-support"
             ]
           }
         ]
@@ -127,11 +194,33 @@
           {
             "group": "Integrations",
             "pages": [
+              "integrations/overview",
               "integrations/twilio",
               "integrations/ringcentral",
               "integrations/stripe",
               "integrations/quickbooks",
-              "integrations/google"
+              "integrations/google",
+              "integrations/retell",
+              "integrations/meta",
+              "integrations/webhooks-zapier",
+              "integrations/byo-number"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Industries",
+        "groups": [
+          {
+            "group": "By industry",
+            "pages": [
+              "industries/hvac",
+              "industries/plumbing",
+              "industries/electrical",
+              "industries/roofing",
+              "industries/cleaning",
+              "industries/landscaping",
+              "industries/pest-control"
             ]
           }
         ]
@@ -170,8 +259,7 @@
   },
   "footer": {
     "socials": {
-      "website": "https://www.revenuesol.com",
-      "x": "https://infiniterankers.io"
+      "website": "https://www.revenuesol.com"
     }
   }
 }

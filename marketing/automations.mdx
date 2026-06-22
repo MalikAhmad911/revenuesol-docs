@@ -1,0 +1,79 @@
+---
+title: "Automations"
+description: "Put follow-ups and reminders on autopilot."
+---
+
+Automations let you put repetitive follow-ups, reminders, and internal alerts on autopilot so nothing slips through the cracks while your crew is in the field. Built into Revenue Sol by Infinite Rankers LLC, the automations engine watches for things happening in your account and reacts the way you tell it to, around the clock.
+
+## How the engine works
+
+Every automation follows the same simple shape: a **trigger** kicks it off, optional **conditions** decide whether it should continue, and one or more **actions** do the work.
+
+<Steps>
+  <Step title="Choose a trigger">
+    The trigger is the event that starts an automation, such as a new lead arriving, a job being marked complete, an invoice going unpaid, or a lead stage changing. One automation starts from one trigger.
+  </Step>
+  <Step title="Add conditions (optional)">
+    Conditions filter which records continue. For example, only proceed if the lead came from a web form, the job total is over a certain amount, or the contact has a specific tag. If the conditions are not met, the automation stops quietly.
+  </Step>
+  <Step title="Define actions">
+    Actions are what happens next: send an SMS or email, wait a set amount of time, create a task, add or remove a tag, move a lead to a new stage, or notify a teammate. You can chain several actions in sequence.
+  </Step>
+</Steps>
+
+<Note>
+  Time-based steps (waits and delays) let you build multi-touch sequences, like texting a quote follow-up one day later and emailing again three days after that if there's still no response.
+</Note>
+
+## Common building blocks
+
+These are the pieces you'll reach for most often when assembling an automation:
+
+- **Triggers** — new lead, form submission, missed call, job created or completed, quote sent or approved, invoice paid or overdue, stage change, or a tag being added.
+- **Conditions** — lead source, tag or segment membership, pipeline stage, job or invoice value, and assigned team member.
+- **Actions** — send SMS, send email, wait/delay, create a task, assign an owner, add or remove a tag, update a lead stage, request a Google review, or send an internal notification.
+
+<Tip>
+  Pair automations with your [Knowledge Hub](/ai-employee/knowledge-hub) and AI Employee so that automated outbound messages can hand off to AI-assisted replies when a customer responds.
+</Tip>
+
+## Enabling and disabling automations
+
+Each automation has an on/off state, so you can build and test safely before it goes live.
+
+- **Enable** an automation when you're ready for it to start reacting to new events. Existing records that already passed the trigger point won't be pulled in retroactively.
+- **Disable** an automation to pause it without deleting your setup. Turn it back on at any time and it resumes for future events.
+
+<Warning>
+  Before enabling an automation that sends messages, double-check your message text, wait times, and conditions. A misconfigured delay or missing condition can send the wrong message to the wrong contacts.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do automated texts use my own phone number?">
+    Yes. Outbound SMS and calls use the Twilio or RingCentral number you connected, billed at carrier cost with no markup.
+  </Accordion>
+  <Accordion title="Can I start from a template instead of building from scratch?">
+    Yes. Recipes give you prebuilt automations you can turn on and customize. See [Recipes](/marketing/recipes).
+  </Accordion>
+  <Accordion title="Will automations message a contact who already replied?">
+    Use conditions and stage changes to stop a sequence once a contact responds or converts, so you don't keep messaging someone who's already engaged.
+  </Accordion>
+</AccordionGroup>
+
+If you get stuck building an automation, reach out to contact@infiniterankers.io and the team will help you map it out.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Recipes" href="/marketing/recipes">
+    Turn on prebuilt automations and customize them for your business.
+  </Card>
+  <Card title="SMS &amp; email campaigns" href="/marketing/campaigns">
+    Run one-time broadcasts and A/B-tested marketing campaigns.
+  </Card>
+  <Card title="Leads &amp; pipelines" href="/crm/leads">
+    Set up the stages and tags your automations react to.
+  </Card>
+</CardGroup>

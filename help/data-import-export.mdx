@@ -1,0 +1,83 @@
+---
+title: "Data import & export"
+description: "Move data in and out."
+---
+
+Revenue Sol is built to be the system of record for your home-service business, so moving data in and out is straightforward. Whether you're switching from another CRM, spreadsheets, or paper, you can bring your customer list and history with you. You can also export your own data at any time, because it belongs to you. Revenue Sol is a product of Infinite Rankers LLC, and if you get stuck during a migration, the team at contact@infiniterankers.io is happy to help.
+
+## Importing contacts and history
+
+The most common first step is importing your existing contacts. Revenue Sol accepts a standard CSV file, which you can export from almost any other CRM, spreadsheet app, or accounting tool.
+
+<Steps>
+  <Step title="Prepare your CSV">
+    Export your contacts from your old system as a CSV. Make sure each contact has at least a name and a phone number or email so the AI receptionist and unified inbox can match incoming messages.
+  </Step>
+  <Step title="Upload the file">
+    Go to your contacts and choose the import option, then select your CSV file.
+  </Step>
+  <Step title="Map your columns">
+    Match each column in your file to a Revenue Sol field, such as name, phone, email, address, tags, and notes. Unmatched columns can be skipped.
+  </Step>
+  <Step title="Review and confirm">
+    Check the preview, then run the import. New contacts are created and existing ones can be updated where records match.
+  </Step>
+</Steps>
+
+<Tip>
+Clean your data before importing. Removing duplicates and standardizing phone numbers to a consistent format up front saves cleanup work later and improves matching across calls, SMS, and email.
+</Tip>
+
+For account history such as past jobs, invoices, or notes, importing alongside contacts keeps everything connected. If you're moving accounting data, you can also connect QuickBooks so customers and invoices stay in sync rather than importing them manually. See [Integrations](/integrations/quickbooks) for setup details.
+
+## Exporting your data
+
+Your data is always yours. You can export contacts, leads, and reporting data to a CSV file whenever you need it for backups, accounting, or analysis in another tool.
+
+- **Contacts and leads** export as CSV with the fields you see in the CRM.
+- **Reports and analytics** can be exported so you can build your own spreadsheets or share figures with your accountant.
+- **Invoices and payments** records are available for reconciliation and bookkeeping.
+
+<Note>
+Exports reflect your current data at the time you run them. Run a fresh export whenever you need the latest snapshot.
+</Note>
+
+## Supported formats and limits
+
+<Info>
+CSV (comma-separated values) is the supported format for both import and export. It opens in Excel, Google Sheets, Numbers, and virtually every CRM and accounting tool.
+</Info>
+
+For best results, keep import files reasonably sized. If you have a very large list, split it into multiple files and import them in batches. This makes it easier to review results and correct any rows that don't map cleanly.
+
+<AccordionGroup>
+  <Accordion title="What columns should my contact file include?">
+    Name and at least one contact method (phone or email) are essential. Address, tags, and notes are recommended so segments, routing, and reminders work well from day one.
+  </Accordion>
+  <Accordion title="Will importing create duplicate contacts?">
+    Matching on phone or email helps avoid duplicates. Standardize these fields before importing, and review the preview to confirm how matched records will be handled.
+  </Accordion>
+  <Accordion title="Can I move my accounting data without a CSV?">
+    Yes. Connecting QuickBooks keeps customers and invoices in sync automatically, which is usually cleaner than a one-time CSV import.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+Imports that create or update many records cannot be undone in bulk. Review the preview carefully and start with a small test file if you're unsure about your column mapping.
+</Warning>
+
+If a migration involves large volumes or unusual source formats, reach out to contact@infiniterankers.io and the team can advise on the best approach.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Import contacts" href="/crm/contacts">
+    Bring your existing customer list into the CRM with a CSV.
+  </Card>
+  <Card title="Export your data" href="/analytics/reports">
+    Export contacts and reporting data for backups or analysis.
+  </Card>
+  <Card title="Connect QuickBooks" href="/integrations/quickbooks">
+    Keep customers and invoices in sync automatically.
+  </Card>
+</CardGroup>

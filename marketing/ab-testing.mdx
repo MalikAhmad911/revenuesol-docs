@@ -1,0 +1,94 @@
+---
+title: "A/B testing"
+description: "Test messages to find what converts."
+---
+
+A/B testing lets you send two versions of a campaign message to a small slice of your audience, see which one performs better, and then send the winning version to everyone else. Instead of guessing which subject line, offer, or call to action your customers respond to, you let real results decide.
+
+## When to use A/B testing
+
+A/B testing works for both SMS and email [campaigns](/marketing/campaigns). It's most useful when you have a meaningful list size, because each variant needs enough recipients to produce a reliable result. Use it to compare one element at a time, such as:
+
+- A subject line or opening sentence
+- An offer or discount amount
+- A call to action ("Book now" vs. "Reply YES")
+- Send timing or tone
+
+<Tip>
+Change only one element per test. If you change the subject line and the offer at the same time, you won't know which change drove the difference.
+</Tip>
+
+## Set up an A/B test
+
+<Steps>
+<Step title="Create a campaign">
+Start a new SMS or email campaign and choose your audience segment, just as you would for a standard send.
+</Step>
+<Step title="Enable A/B testing">
+Turn on the A/B testing option for the campaign. This unlocks a second message variant alongside your original.
+</Step>
+<Step title="Write Variant A and Variant B">
+Compose both versions. Keep everything identical except the single element you want to test.
+</Step>
+<Step title="Set the test split">
+Choose how much of your audience receives the test. A common approach is to send each variant to a small portion of the list, then send the winner to the remaining recipients.
+</Step>
+<Step title="Pick your winning metric">
+Decide what defines success before you launch (for example, open rate for email or reply/click rate). This keeps the result objective.
+</Step>
+<Step title="Launch and let it run">
+Send the test and give it enough time to gather responses before declaring a winner.
+</Step>
+</Steps>
+
+## What to measure
+
+Choose a metric that maps to your actual goal, not just a vanity number.
+
+- **Email open rate** — best for testing subject lines and preview text.
+- **Click rate** — measures whether your message body and call to action drive action.
+- **Reply rate** — strong signal for SMS, where a reply often starts a real conversation in your [unified inbox](/inbox/overview).
+- **Conversions** — the most meaningful metric: booked jobs, approved [quotes](/quotes/overview), or completed payments that follow the message.
+
+<Note>
+Carrier costs for SMS are billed at cost through your connected Twilio or RingCentral number with no markup, so testing two short message variants stays inexpensive.
+</Note>
+
+## Read the results and pick a winner
+
+Open the campaign report to compare the variants side by side on your chosen metric.
+
+- Look for a clear, consistent gap, not a one or two response difference that could be random noise.
+- Make sure each variant reached enough recipients before you trust the result. Small samples produce misleading swings.
+- Confirm the winner on the metric you set at the start, then send that version to the rest of your audience.
+
+<Warning>
+Don't call a winner too early. A variant that looks ahead in the first hour can fall behind once more recipients respond. Let the test gather a reasonable volume first.
+</Warning>
+
+## FAQs
+
+<AccordionGroup>
+<Accordion title="How big should my audience be?">
+The larger your list, the more reliable your result. Very small lists can swing on a handful of responses, so treat those outcomes as directional rather than definitive.
+</Accordion>
+<Accordion title="Can I A/B test both SMS and email?">
+Yes. A/B testing is available for both channels. Just remember email and SMS use different winning metrics, like open rate for email and reply rate for SMS.
+</Accordion>
+<Accordion title="What if there's no clear winner?">
+A tie tells you the element you tested doesn't strongly affect behavior. Move on and test a different element, such as the offer or call to action.
+</Accordion>
+</AccordionGroup>
+
+If you need help interpreting a result, contact the Revenue Sol team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
+
+<CardGroup cols={2}>
+<Card title="Campaigns" href="/marketing/campaigns">
+Build and send SMS and email campaigns to your segments.
+</Card>
+<Card title="Automations" href="/marketing/automations">
+Trigger messages automatically with triggers and recipes.
+</Card>
+</CardGroup>

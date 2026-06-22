@@ -1,0 +1,96 @@
+---
+title: "Automation recipes"
+description: "Ready-made workflows to copy."
+---
+
+Automation recipes are pre-built workflows you can copy into your account and customize. Each recipe pairs a trigger (something that happens in Revenue Sol) with one or more actions (a text, an email, a task, or a stage change) so routine follow-up happens without anyone lifting a finger. Use these as starting points, then tweak the timing and wording to match your business.
+
+<Note>
+Recipes live in the automations engine. Open a recipe, adjust the message text and delays, connect your sending channel (your Twilio or RingCentral number for SMS), and turn it on. You can edit any step after activating.
+</Note>
+
+## Missed-call text-back
+
+Never lose a lead because no one could pick up. When a call goes unanswered, this recipe texts the caller within seconds.
+
+<Steps>
+  <Step title="Set the trigger">Choose the missed or abandoned call trigger so the recipe fires the moment a call ends without being answered.</Step>
+  <Step title="Send an instant text">Reply from your business number with a short message like "Sorry we missed you! How can we help?" so the lead can text back.</Step>
+  <Step title="Route the reply">New replies land in your [unified inbox](/inbox/overview), where the AI Employee or a teammate can continue the conversation.</Step>
+</Steps>
+
+## Estimate follow-up
+
+Quotes that sit unopened rarely close. This recipe nudges customers who have not approved an estimate.
+
+<Steps>
+  <Step title="Trigger on a sent estimate">Start the workflow when a [quote or estimate](/payments/quotes) is sent but not yet approved.</Step>
+  <Step title="Wait, then follow up">After 2 days with no response, send a friendly text or email reminding them the estimate is ready to review and e-sign.</Step>
+  <Step title="Add a second touch">If still unapproved after 5 days, send one more nudge and create a task so a rep can call.</Step>
+</Steps>
+
+<Tip>
+Include the approval link in the message so customers can e-sign in one tap from their phone.
+</Tip>
+
+## Review request after a job
+
+Turn finished work into Google reviews automatically.
+
+<Steps>
+  <Step title="Trigger on job completion">Fire the recipe when a [job](/jobs/overview) is marked complete.</Step>
+  <Step title="Wait a short window">Pause a few hours so the customer has had time to enjoy the result.</Step>
+  <Step title="Send the review request">Text a personalized Google review link. New reviews can get AI-written replies from the [reputation](/reputation/overview) tools.</Step>
+</Steps>
+
+## No-show reminder
+
+Cut down on missed appointments with timely reminders before a scheduled visit.
+
+<Steps>
+  <Step title="Trigger on a scheduled job">Start when a job or appointment is booked on the calendar.</Step>
+  <Step title="Remind the day before">Send an SMS confirming the date, time, and arrival window the evening before.</Step>
+  <Step title="Send a morning-of text">Send a final reminder a couple of hours ahead with an easy way to reschedule.</Step>
+</Steps>
+
+## Reactivation of old customers
+
+Win back past customers who have gone quiet.
+
+<Steps>
+  <Step title="Build the audience">Use [tags or segments](/crm/contacts) to find customers with no job in the last 6 to 12 months.</Step>
+  <Step title="Send an offer">Text or email a seasonal tune-up or a return-customer discount.</Step>
+  <Step title="Follow up once">If there is no reply after a week, send a single gentle reminder, then stop.</Step>
+</Steps>
+
+<Warning>
+Keep automated SMS frequency reasonable and always include opt-out handling. Carrier costs for calls and texts pass through at cost on your own Twilio or RingCentral number.
+</Warning>
+
+## FAQ
+
+<AccordionGroup>
+  <Accordion title="Can I change a recipe after turning it on?">
+    Yes. Every step, message, and delay is editable at any time, and you can pause a recipe without deleting it.
+  </Accordion>
+  <Accordion title="Will recipes message the same person repeatedly?">
+    No. Workflows respect enrollment rules so a contact is not double-enrolled, and you can cap how often someone hears from you.
+  </Accordion>
+  <Accordion title="Do I need a specific plan?">
+    Automations and AI are included on every plan, from Starter to Enterprise. Questions? Email contact@infiniterankers.io.
+  </Accordion>
+</AccordionGroup>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="SMS & email campaigns" href="/marketing/campaigns">
+    Send one-off and A/B-tested broadcasts to your segments.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    Manage every reply from calls, texts, email, and web forms in one view.
+  </Card>
+  <Card title="Reputation" href="/reputation/overview">
+    Automate Google review requests and AI-written replies.
+  </Card>
+</CardGroup>

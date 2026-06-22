@@ -1,0 +1,80 @@
+---
+title: "Status & uptime"
+description: "Check service status."
+---
+
+Revenue Sol runs your phones, inbox, scheduling, and payments, so knowing whether a slowdown is on your end or ours matters. This page explains where to check platform status and what to do if you suspect an incident.
+
+## When to suspect a platform issue
+
+Most problems you run into are local and quick to rule out. Before assuming an outage, check whether the issue affects everyone in your business or just one device or browser.
+
+<Steps>
+  <Step title="Refresh and retry">
+    Reload the page in the web app at app.revenuesol.com, or fully close and reopen the mobile app. A single failed action is rarely an outage.
+  </Step>
+  <Step title="Test a second device or network">
+    Try the app on another device, browser, or your phone's cellular connection. If it works elsewhere, the problem is local.
+  </Step>
+  <Step title="Check your own integrations">
+    Calls and texts route through your own Twilio or RingCentral number, and payments run through Stripe. An issue with one of those providers can look like a Revenue Sol problem. Open [Settings](/settings/integrations) to confirm each integration still shows connected.
+  </Step>
+</Steps>
+
+<Note>
+Because you bring your own phone number, voice and SMS delivery also depend on Twilio or RingCentral being healthy. If only calls or texts are affected, check your carrier's status as well.
+</Note>
+
+## What an incident looks like
+
+During a genuine platform incident you may see widespread errors when loading pages, the AI receptionist or AI Employee failing to respond, the [unified inbox](/inbox/overview) not updating with new messages, or payments and quotes failing for every customer at once. Symptoms that hit every user at the same time point to a service-side issue rather than something in your account.
+
+## What to do during an incident
+
+<Steps>
+  <Step title="Confirm it is widespread">
+    Use the checks above to rule out a local cause. If teammates on different networks see the same failures, it is likely service-side.
+  </Step>
+  <Step title="Avoid repeated retries on payments">
+    Do not resend the same text-to-pay request or re-run a card charge many times during an outage. Wait for service to recover, then verify in [Payments](/payments/overview) before retrying so customers are not charged twice.
+  </Step>
+  <Step title="Report it to support">
+    Contact our team at contact@infiniterankers.io with what you are seeing, the time it started, and whether it affects calls, texts, the inbox, payments, or the whole app. Screenshots help us diagnose faster.
+  </Step>
+</Steps>
+
+<Warning>
+If your AI receptionist is unreachable during an incident, missed calls and texts may not be answered automatically. Consider monitoring your number directly until service is restored.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Is my data safe during an outage?">
+    Yes. Your contacts, conversations, jobs, and payment records are stored securely and are not lost during a temporary service interruption. Once service recovers, your data is intact.
+  </Accordion>
+  <Accordion title="Will queued messages and reminders still send?">
+    Scheduled reminders and automations resume once the platform recovers. If you need something delivered immediately during an incident, send it manually after confirming the system is back up.
+  </Accordion>
+  <Accordion title="Who do I contact for urgent issues?">
+    Revenue Sol is a product of Infinite Rankers LLC. Reach support at contact@infiniterankers.io and include your business name and a clear description of the impact.
+  </Accordion>
+</AccordionGroup>
+
+<Tip>
+Keep contact@infiniterankers.io saved in your phone so you can report an issue quickly, even when you are out in the field.
+</Tip>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Contact support" href="/help/contact-support">
+    Reach the Infinite Rankers team when you need a hand.
+  </Card>
+  <Card title="Connect your integrations" href="/settings/integrations">
+    Verify Twilio, RingCentral, Stripe, and Google are connected.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    See how calls, texts, email, and web leads come together.
+  </Card>
+</CardGroup>

@@ -1,0 +1,91 @@
+---
+title: "IMAP & SMTP"
+description: "Connect any mailbox via IMAP/SMTP."
+---
+
+When your business uses a mailbox that isn't a one-click provider, you can still bring it into Revenue Sol using IMAP and SMTP. Connecting this way pulls incoming email into your [unified inbox](/channels/inbox) and lets you reply, follow up, and trigger automations from the same conversation view you use for calls and texts.
+
+## What IMAP and SMTP do
+
+These are the two standard protocols nearly every email host supports:
+
+- **IMAP** reads mail from your provider so incoming messages appear in Revenue Sol.
+- **SMTP** sends mail through your provider so replies leave from your real business address.
+
+Connecting both means your team works the whole email thread in one place, while customers keep seeing your familiar address.
+
+## What you'll need
+
+Gather these details from your email provider before you start. You can usually find them in your host's help docs under "email client setup" or "IMAP/SMTP settings."
+
+| Setting | Typical value |
+| --- | --- |
+| Email address | your full business address |
+| Username | usually your full email address |
+| Password | mailbox or app-specific password |
+| IMAP server (incoming) | e.g. imap.yourhost.com |
+| IMAP port | 993 (SSL) |
+| SMTP server (outgoing) | e.g. smtp.yourhost.com |
+| SMTP port | 465 (SSL) or 587 (TLS/STARTTLS) |
+
+<Note>
+If your provider uses two-factor authentication (Gmail, Outlook, and many others), your normal login password will not work. Generate an **app password** in your email account's security settings and use that instead.
+</Note>
+
+## Connect your mailbox
+
+<Steps>
+  <Step title="Open channel settings">
+    Go to your settings and choose to add a new email channel, then select the IMAP/SMTP (custom mailbox) option.
+  </Step>
+  <Step title="Enter your account details">
+    Type your email address, username, and password (or app password).
+  </Step>
+  <Step title="Add the incoming (IMAP) server">
+    Enter your IMAP server address and port, and keep SSL enabled.
+  </Step>
+  <Step title="Add the outgoing (SMTP) server">
+    Enter your SMTP server address and port, with SSL or TLS as your provider specifies.
+  </Step>
+  <Step title="Test and save">
+    Run the connection test. A successful test confirms Revenue Sol can both read and send mail. Save to finish.
+  </Step>
+</Steps>
+
+<Tip>
+Send yourself a test email and reply to it from inside Revenue Sol to confirm both directions work before you route real customer mail.
+</Tip>
+
+## Troubleshooting connection issues
+
+<AccordionGroup>
+  <Accordion title="Authentication failed or wrong password">
+    Double-check the username (it's usually your full email address, not just the part before the @). If your provider enforces two-factor authentication, switch to an app-specific password instead of your normal login.
+  </Accordion>
+  <Accordion title="Connection timed out or refused">
+    Verify the server hostnames are spelled exactly as your provider lists them, and confirm the ports: IMAP 993, SMTP 465 or 587. A wrong port is the most common cause of a timeout.
+  </Accordion>
+  <Accordion title="Mail receives but won't send (or vice versa)">
+    This points to one half of the setup. Re-check the SMTP server and port if sending fails, or the IMAP server and port if receiving fails. Some hosts use a different port for STARTTLS (587) than for SSL (465).
+  </Accordion>
+  <Accordion title="Provider is blocking the connection">
+    Some hosts require you to explicitly enable IMAP access or approve "less secure" / third-party app sign-ins in your mailbox settings. Enable that option, then retry the test.
+  </Accordion>
+</AccordionGroup>
+
+<Warning>
+Changing your mailbox password later will break the connection. After any password change, return to channel settings and update the credentials so your inbox keeps syncing.
+</Warning>
+
+If the connection still won't establish after checking these, reach out to Infinite Rankers LLC support at contact@infiniterankers.io with your provider name and the server settings you used, and the team can help you finish the setup.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Unified inbox" href="/channels/inbox">
+    See how email, calls, SMS, and web-form leads come together in one conversation view.
+  </Card>
+  <Card title="Email campaigns" href="/marketing/email-campaigns">
+    Send and A/B test broadcast emails to your contacts and segments.
+  </Card>
+</CardGroup>

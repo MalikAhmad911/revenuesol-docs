@@ -1,0 +1,95 @@
+---
+title: "Email setup"
+description: "Connect your email to Revenue Sol."
+---
+
+Connecting your business email brings every customer message into one place. Once your inbox is linked, incoming emails appear in the same [unified inbox](/channels/unified-inbox) as your calls, texts, and web-form leads, so you and your team can reply from a single conversation view instead of jumping between apps.
+
+## What you can do with email
+
+After connecting your email, Revenue Sol lets you:
+
+- Receive and read customer emails inside the unified inbox, threaded alongside other channels.
+- Reply directly from a contact's conversation, keeping the full history attached to the right [contact](/crm/contacts) or [lead](/crm/leads).
+- Send email as part of [marketing campaigns](/marketing/campaigns) and trigger emails from your [automations](/marketing/automations).
+- Let your [AI Employee](/ai/ai-employee) draft and send replies using knowledge from your Knowledge Hub.
+
+<Note>
+Email replies are sent from your own business address, so customers see your brand, not a generic Revenue Sol sender.
+</Note>
+
+## What's supported
+
+Revenue Sol connects to standard business email accounts over IMAP and SMTP. This covers most providers, including Google Workspace, Microsoft 365, and accounts hosted with your own domain or web host.
+
+- **IMAP** is used to read and sync incoming mail into your inbox.
+- **SMTP** is used to send your outgoing replies and campaign messages.
+
+For exact server settings, ports, and provider-specific steps, see the [IMAP/SMTP setup guide](/channels/imap-smtp).
+
+<Tip>
+If your provider requires it, generate an app-specific password rather than using your main account password. This is the most common cause of connection failures.
+</Tip>
+
+## Connect your email
+
+<Steps>
+  <Step title="Open channel settings">
+    Go to your workspace settings and find the channels or integrations area, then choose to add an email account.
+  </Step>
+  <Step title="Enter your email address">
+    Provide the business email address you want to send and receive from.
+  </Step>
+  <Step title="Add your server details">
+    Enter your IMAP and SMTP server settings, including hostnames, ports, and your login credentials. See the [IMAP/SMTP guide](/channels/imap-smtp) for the values your provider uses.
+  </Step>
+  <Step title="Verify and save">
+    Revenue Sol tests the connection. Once it succeeds, your inbox begins syncing and new emails flow into the unified inbox.
+  </Step>
+</Steps>
+
+## Sending limits and basics
+
+Email sending is governed by your email provider, not by Revenue Sol. Each provider sets its own daily send limits and rate caps, so high-volume sending depends on the account and plan you connect.
+
+<Warning>
+Sending too many emails too quickly, or to unverified lists, can cause your provider to throttle or block your account. Warm up new addresses gradually and only email contacts who expect to hear from you.
+</Warning>
+
+To keep your messages landing in the inbox rather than spam:
+
+- Use a real, monitored business address rather than a no-reply alias.
+- Make sure your domain has proper SPF, DKIM, and DMARC records configured with your provider.
+- Keep your lists clean and honor unsubscribe requests in [campaigns](/marketing/campaigns).
+
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My connection keeps failing">
+    Double-check your IMAP and SMTP hostnames and ports, and confirm you are using an app-specific password if your provider requires one. Review the [IMAP/SMTP guide](/channels/imap-smtp) for the correct values.
+  </Accordion>
+  <Accordion title="Emails aren't appearing in my inbox">
+    Allow a few minutes for the first sync to complete. If messages still don't show, re-verify the connection in channel settings.
+  </Accordion>
+  <Accordion title="My replies are going to spam">
+    Confirm your domain's SPF, DKIM, and DMARC records are set up with your email provider, and avoid sending large volumes from a brand-new address.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+Need a hand getting connected? Revenue Sol is a product of Infinite Rankers LLC. Reach our team at contact@infiniterankers.io and we'll help you get your email linked.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="IMAP/SMTP settings" href="/channels/imap-smtp">
+    Find the exact server details for your email provider.
+  </Card>
+  <Card title="Unified inbox" href="/channels/unified-inbox">
+    See how email, calls, SMS, and web leads come together in one view.
+  </Card>
+  <Card title="Email campaigns" href="/marketing/campaigns">
+    Send marketing emails with A/B testing to your contacts.
+  </Card>
+</CardGroup>

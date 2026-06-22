@@ -1,73 +1,90 @@
 ---
 title: "Twilio"
-description: "Connect Twilio to send and receive SMS and calls in Revenue Sol."
+description: "Use your Twilio number for calls and SMS."
 ---
 
-Connecting Twilio gives Revenue Sol a phone number to **send and receive text messages and calls**. It powers your [unified inbox](/guides/inbox), SMS campaigns, missed-call text back, and the [AI voice receptionist](/guides/voice-agent). You bring your own Twilio account, so usage is billed at carrier cost.
+Revenue Sol lets you bring your own Twilio phone number to power calls and text messages across the platform. When Twilio is connected, your number drives the 24/7 AI receptionist, the unified inbox, SMS campaigns, automations, and text-to-pay. Because it is your own account, calls and texts are billed by Twilio at carrier cost with no markup from Revenue Sol.
 
-## What connecting Twilio enables
+## What you need
 
-<CardGroup cols={2}>
-  <Card title="Two-way SMS" icon="comment-sms">
-    Receive and reply to customer texts in the inbox.
-  </Card>
-  <Card title="Inbound & outbound calls" icon="phone">
-    Take and make calls, with call logging and recordings.
-  </Card>
-  <Card title="SMS campaigns" icon="bullhorn">
-    Send bulk SMS to your contacts.
-  </Card>
-  <Card title="Voice AI" icon="robot">
-    Route calls to the AI receptionist.
-  </Card>
-</CardGroup>
+Before you connect, gather these details from your Twilio account:
 
-## Before you start
+- Your **Account SID** (your Twilio account identifier).
+- Your **Auth Token** (used to authorize Revenue Sol to send and receive on your behalf).
+- A **phone number** purchased in Twilio that is both voice- and SMS-capable.
 
-<Note>
-You'll need a **Twilio account** with at least one phone number that has **SMS and voice** capabilities enabled.
-</Note>
+<Info>
+Because you bring your own Twilio account, calls and texts are billed directly by Twilio at standard carrier rates. Revenue Sol does not add a markup on call or message usage.
+</Info>
 
 ## Connect Twilio
 
 <Steps>
-  <Step title="Open Settings → Connectors">
-    In Revenue Sol, go to **Settings → Connectors** (or **Settings → Integrations → Twilio**).
+  <Step title="Open the integrations settings">
+    In Revenue Sol, go to your integrations settings and choose Twilio as your phone and SMS provider.
   </Step>
-  <Step title="Start the connect flow">
-    Click **Connect Twilio** and authorize Revenue Sol to access your Twilio account through the secure connect flow.
+  <Step title="Enter your credentials">
+    Paste your Account SID and Auth Token from the Twilio Console. Revenue Sol uses these to send and receive calls and messages through your account.
   </Step>
-  <Step title="Choose your number">
-    Revenue Sol reads the phone numbers available in your account. Pick the number you want to use as your default for messaging and calls.
+  <Step title="Select your number">
+    Choose the Twilio number you want Revenue Sol to use. This becomes the number your customers call and text, and the one your outbound messages come from.
   </Step>
-  <Step title="You're connected">
-    Inbound texts and calls to that number now flow into your inbox, and you can send from it too.
+  <Step title="Save and verify">
+    Save the connection. Revenue Sol confirms the credentials are valid and configures your number to route incoming calls and texts into the platform.
   </Step>
 </Steps>
 
-## How messages reach Revenue Sol
+<Tip>
+If you do not have a Twilio number yet, purchase a voice- and SMS-capable local number in the Twilio Console before you connect. For a guided walkthrough of choosing and connecting your business number, see [/getting-started/connect-phone-number](/getting-started/connect-phone-number).
+</Tip>
 
-Once connected, Twilio delivers inbound messages and call events to Revenue Sol's secure webhook endpoints, which verify each request's signature before processing. You don't need to configure these by hand during the standard connect flow.
+## What connecting enables
 
-<Note>
-Technical reference: inbound SMS and delivery status are received at `/api/webhooks/twilio/sms`, and call events at `/api/webhooks/twilio/voice`. See [Webhooks](/developers/webhooks).
-</Note>
+Once your Twilio number is live, it powers the communication features across Revenue Sol:
 
-## Choosing a default provider
+- **AI receptionist** answers calls and texts around the clock and books jobs.
+- **Unified inbox** brings every call and SMS into one conversation view alongside email and web-form leads.
+- **SMS campaigns and automations** send texts from your number.
+- **Text-to-pay and payment links** can be delivered by SMS so customers pay from their phone.
 
-If you connect both Twilio and [RingCentral](/integrations/ringcentral), set your preferred default under **Settings → Connectors** so Revenue Sol knows which to use for new messages and calls.
+## Compliance and deliverability
+
+US carriers require application-to-person (A2P) registration for SMS. Make sure your Twilio number and messaging are properly registered in Twilio so your texts deliver reliably. Keep your Auth Token private; treat it like a password and rotate it in Twilio if you suspect it has been exposed.
 
 <Warning>
-Make sure your chosen number supports the channels you need (SMS and/or voice). A voice-only number can't send texts, and vice versa.
+If you regenerate your Auth Token in Twilio, your existing connection stops working until you update the credentials in Revenue Sol.
 </Warning>
 
-## Related
+## Troubleshooting
+
+<AccordionGroup>
+  <Accordion title="My number connected but texts are not sending">
+    Confirm your number is SMS-capable and that your A2P messaging registration is complete in Twilio. Unregistered or pending numbers are often blocked by US carriers.
+  </Accordion>
+  <Accordion title="Calls are not coming into the inbox">
+    Re-save the Twilio connection so Revenue Sol can reconfigure your number's routing, and verify the number you selected is voice-capable.
+  </Accordion>
+  <Accordion title="Authorization errors after connecting">
+    Your Account SID or Auth Token may be incorrect or recently rotated. Copy fresh values from the Twilio Console and reconnect.
+  </Accordion>
+</AccordionGroup>
+
+<Note>
+Prefer not to use Twilio? Revenue Sol also supports RingCentral as a bring-your-own-number provider. See [/integrations/ringcentral](/integrations/ringcentral).
+</Note>
+
+If you need help connecting your number, contact Revenue Sol support at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
 
 <CardGroup cols={2}>
-  <Card title="RingCentral" icon="phone" href="/integrations/ringcentral">
-    Alternative phone/SMS provider.
+  <Card title="Connect a phone number" href="/getting-started/connect-phone-number">
+    Walk through choosing and connecting your business number.
   </Card>
-  <Card title="AI Voice Receptionist" icon="robot" href="/guides/voice-agent">
-    Have AI answer your calls.
+  <Card title="RingCentral" href="/integrations/ringcentral">
+    Use a RingCentral number instead of Twilio.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/unified-inbox">
+    See how calls and texts flow into one conversation view.
   </Card>
 </CardGroup>

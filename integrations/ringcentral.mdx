@@ -1,79 +1,81 @@
 ---
 title: "RingCentral"
-description: "Connect RingCentral as your SMS and voice provider in Revenue Sol."
+description: "Use RingCentral for calls and SMS."
 ---
 
-RingCentral is an alternative to [Twilio](/integrations/twilio) for **SMS and calls**. Connecting it lets Revenue Sol receive and send texts, handle inbound and outbound calls, and capture voicemails — all flowing into your [unified inbox](/guides/inbox).
+Connecting RingCentral lets Revenue Sol place and receive calls and texts through your own RingCentral number. Calls and texts are billed by RingCentral at carrier cost with no markup, so you keep the number and rate plan you already have while Revenue Sol handles the conversation, AI receptionist, and unified inbox on top.
 
-## What connecting RingCentral enables
+<Info>
+RingCentral is one of two phone providers you can bring to Revenue Sol. If you use Twilio instead, see [Twilio](/integrations/twilio). You only need one provider connected.
+</Info>
 
-<CardGroup cols={2}>
-  <Card title="Two-way SMS" icon="comment-sms">
-    Send and receive texts from your RingCentral number.
-  </Card>
-  <Card title="Calls" icon="phone">
-    Inbound and outbound calling.
-  </Card>
-  <Card title="Voicemail" icon="voicemail">
-    Voicemail notifications surface in the inbox.
-  </Card>
-  <Card title="Presence" icon="circle-dot">
-    Availability updates from RingCentral.
-  </Card>
-</CardGroup>
+## Connect your RingCentral account
 
-## Before you start
-
-<Note>
-You'll need a **RingCentral account** with SMS and voice enabled. Revenue Sol connects via secure OAuth — you'll log in to RingCentral and grant access.
-</Note>
-
-## Connect RingCentral
+You authorize Revenue Sol from the integrations area of your workspace. Connecting uses RingCentral's secure sign-in, so you never share your password with Revenue Sol.
 
 <Steps>
-  <Step title="Open Settings → Connectors">
-    In Revenue Sol, go to **Settings → Connectors**.
+  <Step title="Open the RingCentral integration">
+    In your workspace settings, find the integrations or phone connection area and choose RingCentral.
   </Step>
-  <Step title="Click Connect RingCentral">
-    This starts a secure OAuth flow.
+  <Step title="Authorize access">
+    You're redirected to RingCentral to sign in and approve access. Approve the requested permissions so Revenue Sol can send and receive calls and SMS on your behalf.
   </Step>
-  <Step title="Log in and authorize">
-    Sign in to RingCentral and grant Revenue Sol access to messaging and calls.
+  <Step title="Select an SMS-capable number">
+    After authorizing, pick the RingCentral number you want Revenue Sol to use. Choose a number that has SMS enabled on your RingCentral plan so texts route correctly into your inbox.
   </Step>
-  <Step title="Pick your default number">
-    Revenue Sol fetches your available numbers — choose the default for messaging and calls.
-  </Step>
-  <Step title="Webhook subscription is created">
-    Revenue Sol automatically subscribes to message, call, voicemail, and presence events so they appear in your inbox.
+  <Step title="Confirm the connection">
+    Once the number is selected, Revenue Sol shows the connection as active. Send a test text or place a test call to confirm messages and calls land in your [unified inbox](/inbox/overview).
   </Step>
 </Steps>
 
-## How events reach Revenue Sol
+<Warning>
+Choosing a number that is not SMS-capable means calls work but texts won't deliver. If you're unsure, check your RingCentral admin portal or enable messaging on the line in RingCentral before selecting it here.
+</Warning>
 
-RingCentral sends events (`message-store`, `telephony`, `voicemail`, `presence`) to Revenue Sol's secure webhook endpoint, validated against your account. This is set up automatically during connect.
+## Keep the connection healthy
+
+RingCentral access is granted through a token that can expire or be revoked, especially if your RingCentral password changes, an admin removes the app's access, or the account's security settings are updated. When that happens, calls and texts may stop flowing into Revenue Sol.
+
+<Tip>
+Watch your inbox for a banner or status indicator that RingCentral needs attention. If you see one, reconnect promptly so your AI receptionist and messaging keep running without gaps.
+</Tip>
+
+To reconnect, return to the RingCentral integration and authorize again. Re-authorizing refreshes the token and restores call and SMS routing without changing your number or losing your conversation history.
+
+## Import past messages
+
+When you connect, you can bring recent RingCentral message history into Revenue Sol so your team sees the full context of each customer conversation rather than starting from an empty thread. Imported messages are matched to your [contacts](/crm/contacts) where possible and appear alongside new activity in the unified inbox.
 
 <Note>
-Technical reference: RingCentral events are received at `/api/webhooks/ringcentral`. See [Webhooks](/developers/webhooks).
+Importing brings in your existing SMS history; it does not change anything inside RingCentral. The import runs after you finish connecting and may take a little time depending on how much history you have.
 </Note>
 
 ## Troubleshooting
 
 <AccordionGroup>
-  <Accordion title="Messages or calls stopped appearing">
-    A webhook subscription can occasionally expire or need re-establishing. Reconnect from **Settings → Connectors**, or use the retry option to re-subscribe.
+  <Accordion title="Texts aren't being delivered">
+    Confirm the number you selected is SMS-capable in RingCentral. If messaging isn't enabled on that line, calls will still work but texts will fail.
   </Accordion>
-  <Accordion title="I use both Twilio and RingCentral">
-    Set your preferred default provider under **Settings → Connectors** so new messages and calls use the right account.
+  <Accordion title="Calls and texts suddenly stopped">
+    The most common cause is an expired or revoked token. Reopen the RingCentral integration and re-authorize to restore the connection.
+  </Accordion>
+  <Accordion title="I changed my RingCentral password">
+    Password and security changes can invalidate the connection. Reconnect Revenue Sol to RingCentral to issue a fresh token.
   </Accordion>
 </AccordionGroup>
 
-## Related
+If you're still stuck after reconnecting, reach out to Infinite Rankers LLC at contact@infiniterankers.io and we'll help you get calls and texts flowing again.
+
+## Next steps
 
 <CardGroup cols={2}>
-  <Card title="Twilio" icon="phone" href="/integrations/twilio">
-    Alternative phone/SMS provider.
+  <Card title="Unified inbox" href="/inbox/overview">
+    See calls, SMS, email, and web-form leads in one conversation view.
   </Card>
-  <Card title="Unified Inbox" icon="inbox" href="/guides/inbox">
-    Where calls and texts land.
+  <Card title="Twilio" href="/integrations/twilio">
+    Prefer Twilio? Connect it as your phone provider instead.
+  </Card>
+  <Card title="AI receptionist" href="/ai/receptionist">
+    Let the 24/7 AI receptionist answer calls and book jobs.
   </Card>
 </CardGroup>

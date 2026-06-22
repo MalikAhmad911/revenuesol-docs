@@ -1,0 +1,104 @@
+---
+title: "Webhooks & Zapier"
+description: "Connect Revenue Sol to anything."
+---
+
+Revenue Sol fits into the tools you already use. With webhooks and Zapier-style automation, you can push events out of Revenue Sol the moment they happen, and pull data in from other systems, so nothing falls through the cracks between your CRM, accounting, scheduling, and marketing tools.
+
+## When to use webhooks vs. automations
+
+Most home-service businesses never need to write code. Before reaching for webhooks, check whether the built-in [automations engine](/marketing/automations) already does what you need, since it covers the common jobs with no setup.
+
+<CardGroup cols={2}>
+  <Card title="Use built-in automations" icon="bolt">
+    For in-app actions: send a text, move a lead stage, request a review, or assign a task when something happens.
+  </Card>
+  <Card title="Use webhooks" icon="plug">
+    For sending events to external apps, or triggering custom workflows in Zapier, Make, n8n, or your own backend.
+  </Card>
+</CardGroup>
+
+## What you can connect
+
+Webhooks let you sync Revenue Sol with thousands of apps through a connector platform like Zapier or Make. Common patterns include:
+
+- Send new leads and contacts to a spreadsheet, data warehouse, or another CRM.
+- Push won jobs and paid invoices into accounting or reporting tools (alongside the native [QuickBooks integration](/integrations/quickbooks)).
+- Notify your team in Slack, Microsoft Teams, or email when a job is booked or a payment clears.
+- Trigger external campaigns when a lead reaches a specific [pipeline stage](/crm/leads).
+
+## Events you can subscribe to
+
+Webhooks fire when key things happen in your account, so the receiving app always reacts to fresh data. Typical events include:
+
+- A new lead arrives or a contact is created.
+- A lead changes stage in a pipeline.
+- A job is scheduled, completed, or cancelled.
+- A quote is approved and e-signed.
+- An invoice is paid or refunded.
+- A new message lands in the [unified inbox](/inbox/overview).
+
+<Note>
+Available events and payload fields are listed in the developer reference. The exact set depends on your plan and enabled features.
+</Note>
+
+## Connect with Zapier (or similar)
+
+<Steps>
+  <Step title="Create the connection">
+    In Zapier (or Make, n8n, etc.), start a new automation and choose a webhook trigger. Copy the unique webhook URL it generates.
+  </Step>
+  <Step title="Add the webhook in Revenue Sol">
+    In your account settings, open the integrations area and add a new outbound webhook. Paste the URL and pick the events you want to send.
+  </Step>
+  <Step title="Map the data">
+    Trigger a test event so your connector receives a sample payload, then map the Revenue Sol fields to the fields the destination app expects.
+  </Step>
+  <Step title="Turn it on">
+    Activate the automation. From now on, every matching event is delivered automatically.
+  </Step>
+</Steps>
+
+<Tip>
+Send a test event before going live so you can confirm the payload shape and field mapping. This saves you from debugging a silent automation later.
+</Tip>
+
+## Reliability and security
+
+<Warning>
+Webhook endpoints should be served over HTTPS and verify the signature on each request so only Revenue Sol can post to them. Treat any webhook signing secret like a password and never expose it in client-side code.
+</Warning>
+
+If your endpoint is unreachable, deliveries are retried so transient outages do not lose data. For full details on payload formats, headers, signature verification, and retry behavior, see the developer webhooks reference.
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Do I need a developer?">
+    No. With Zapier or Make you can connect Revenue Sol to other tools using a point-and-click interface. Webhooks are there if you want deeper, custom integrations.
+  </Accordion>
+  <Accordion title="Can I pull data into Revenue Sol?">
+    Yes. Use a connector or the API to create contacts, leads, and other records from external systems.
+  </Accordion>
+  <Accordion title="Which plans include webhooks?">
+    Webhook access varies by plan. Email contact@infiniterankers.io if you are unsure what your plan includes.
+  </Accordion>
+</AccordionGroup>
+
+<Info>
+Revenue Sol is a product of Infinite Rankers LLC. For integration help, reach out at contact@infiniterankers.io.
+</Info>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Automations" href="/marketing/automations">
+    Build no-code triggers and recipes inside Revenue Sol.
+  </Card>
+  <Card title="QuickBooks" href="/integrations/quickbooks">
+    Sync invoices and payments with your accounting.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    See every lead and message in one conversation view.
+  </Card>
+</CardGroup>

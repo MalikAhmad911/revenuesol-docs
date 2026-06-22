@@ -1,0 +1,83 @@
+---
+title: "Troubleshooting SMS"
+description: "Fix texting issues."
+---
+
+When texts stop sending or arriving, it usually comes down to one of a few causes: a disconnected phone number, recipient opt-outs, or carrier and compliance limits. Use this page to diagnose the problem quickly and get your messaging back online.
+
+## Quick checks first
+
+<Steps>
+  <Step title="Confirm your number is connected">
+    Open your phone or integration settings and verify your Twilio or RingCentral number shows as connected and active. If the connection dropped, reconnect it before testing anything else. See [Connect Twilio](/integrations/twilio) or [Connect RingCentral](/integrations/ringcentral).
+  </Step>
+  <Step title="Send a test text to yourself">
+    From the [unified inbox](/inbox/overview), send a short message to your own mobile number. If it arrives, the channel is working and the issue is likely specific to one contact.
+  </Step>
+  <Step title="Check the conversation status">
+    Look for an error or "failed" indicator on the message itself. The status often tells you whether the problem is the number, the recipient, or the carrier.
+  </Step>
+</Steps>
+
+## Messages not sending
+
+If outbound texts fail or sit unsent, work through these causes:
+
+- **Number not connected.** Your Twilio or RingCentral number must be linked and verified. Reconnect it from your integration settings.
+- **Insufficient carrier balance.** You bring your own Twilio or RingCentral number and texts are billed at carrier cost. If your Twilio or RingCentral account balance is empty or your card declined, sends will fail. Top up directly with the carrier.
+- **Recipient opted out.** If the contact replied STOP, the carrier blocks further texts to them until they opt back in.
+- **Invalid or non-mobile number.** Landlines and mistyped numbers can't receive SMS. Confirm the contact's number is a valid US mobile.
+
+<Warning>
+Per-message charges for calls and texts are billed by Twilio or RingCentral at carrier cost with no markup from Revenue Sol. A failed send caused by a carrier balance or account issue must be resolved in your carrier account.
+</Warning>
+
+## Messages not receiving
+
+If inbound texts aren't reaching your inbox:
+
+- **Webhook or connection lapsed.** Reconnect your number so the carrier can route incoming messages back to Revenue Sol.
+- **Wrong number in use.** Make sure the connected number is the same one customers are texting.
+- **AI receptionist handling it.** If your [AI receptionist](/ai/receptionist) or [AI Employee](/ai/ai-employee) is enabled, replies may already be handled automatically. Review the conversation to confirm.
+
+## Opt-outs and STOP/START
+
+US carriers automatically honor standard keywords. When a contact texts **STOP**, **UNSUBSCRIBE**, or **CANCEL**, the carrier suppresses future messages to that number. They can resume by texting **START** or **UNSTOP**.
+
+<Note>
+Opt-outs are enforced at the carrier level, so you cannot override them from Revenue Sol. Always respect a contact's choice — this keeps you compliant and protects your sending reputation.
+</Note>
+
+## Carrier and compliance notes
+
+US SMS is regulated and carriers filter messages that look like spam or that come from unregistered senders.
+
+<AccordionGroup>
+  <Accordion title="Why are my texts being filtered or blocked?">
+    Carriers block messages with prohibited content, excessive links, or high-volume sends from numbers that aren't properly registered. Keep messages relevant, include your business name, and avoid link shorteners.
+  </Accordion>
+  <Accordion title="Do I need to register for A2P 10DLC?">
+    Application-to-person texting in the US generally requires brand and campaign registration (A2P 10DLC) through your carrier. Complete this in your Twilio or RingCentral account to avoid filtering.
+  </Accordion>
+  <Accordion title="Always include opt-out language">
+    For marketing texts, include clear consent and opt-out instructions. The [marketing campaigns](/marketing/campaigns) tools help you stay compliant.
+  </Accordion>
+</AccordionGroup>
+
+## Still stuck?
+
+If you've reconnected your number, confirmed carrier balance, and ruled out opt-outs, contact our team at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC, and we can help check your connection and message logs.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Connect Twilio" href="/integrations/twilio">
+    Link or reconnect your Twilio number for calls and texts.
+  </Card>
+  <Card title="Connect RingCentral" href="/integrations/ringcentral">
+    Link or reconnect your RingCentral number.
+  </Card>
+  <Card title="Unified inbox" href="/inbox/overview">
+    Manage SMS, calls, email, and web leads in one view.
+  </Card>
+</CardGroup>

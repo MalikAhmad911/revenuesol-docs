@@ -1,0 +1,96 @@
+---
+title: "Bring your own number"
+description: "Keep your number, pay carrier cost."
+---
+
+Revenue Sol uses a bring-your-own-number (BYO) model. Instead of leasing a phone number from us at a marked-up rate, you connect your own [Twilio](/integrations/twilio) or [RingCentral](/integrations/ringcentral) account. Your calls and texts are billed directly by the carrier at their standard rate, with no markup added by Revenue Sol.
+
+## Why bring your own number
+
+When you connect your own carrier account, you stay in control of the asset your customers already know: your business phone number. There's nothing to port away from us if you ever leave, and you can keep the number your trucks, yard signs, and Google listing already advertise.
+
+This model powers the parts of Revenue Sol that depend on a live phone line:
+
+- The [24/7 AI receptionist](/ai/receptionist) that answers calls and texts and books jobs.
+- The [unified inbox](/inbox/overview), where calls, SMS, email, and web-form leads land in one conversation view.
+- SMS [campaigns](/marketing/campaigns), appointment reminders, and text-to-pay [payment links](/payments/payment-links).
+
+<Note>
+AI is included on every Revenue Sol plan (Starter $65/mo, Professional $199/mo, Scale $399/mo, Enterprise custom). The carrier charges for calls and texts are separate and paid directly to Twilio or RingCentral.
+</Note>
+
+## How the cost works
+
+Revenue Sol does not resell minutes or messages. You pay your subscription to us, and you pay your carrier for usage:
+
+- **Voice and SMS** are billed by Twilio or RingCentral at their published per-minute and per-message rates.
+- **No markup** is added on top of carrier cost.
+- **Usage scales with your business** — a slow winter month costs less in carrier fees than a busy summer.
+
+<Tip>
+For high call and text volume, this BYO model is usually cheaper than bundled per-seat phone plans, because you pay only for what you actually use at wholesale carrier rates.
+</Tip>
+
+## Choosing between Twilio and RingCentral
+
+Both options give you the same Revenue Sol features. Pick the one that fits how your business already works.
+
+<CardGroup cols={2}>
+  <Card title="Twilio" href="/integrations/twilio">
+    Best if you want a fresh, low-cost programmable number purely to power Revenue Sol. Pay-as-you-go pricing and quick setup.
+  </Card>
+  <Card title="RingCentral" href="/integrations/ringcentral">
+    Best if you already run a RingCentral business phone system and want to keep your existing number and desk-phone workflow.
+  </Card>
+</CardGroup>
+
+## Connecting your number
+
+<Steps>
+  <Step title="Choose your provider">
+    Decide whether you'll use Twilio or RingCentral, then create or sign in to that carrier account.
+  </Step>
+  <Step title="Connect it in Revenue Sol">
+    Open the integrations area in your Revenue Sol workspace and follow the connection flow for your chosen provider. You'll authorize Revenue Sol to send and receive on your behalf.
+  </Step>
+  <Step title="Select your number">
+    Pick the phone number you want Revenue Sol to use for calls and texts. This becomes the line your AI receptionist and inbox operate on.
+  </Step>
+  <Step title="Test it">
+    Send a test text and place a test call to confirm messages flow into your unified inbox and calls reach the AI receptionist.
+  </Step>
+</Steps>
+
+<Warning>
+You must keep your Twilio or RingCentral account in good standing and funded. If the carrier account runs out of balance or is suspended, calls and texts through Revenue Sol will stop until you resolve it directly with the carrier.
+</Warning>
+
+## Frequently asked questions
+
+<AccordionGroup>
+  <Accordion title="Can I keep my existing business number?">
+    Yes. You can port an existing number into Twilio, or connect a number you already own in RingCentral. Porting is handled by the carrier, not by Revenue Sol.
+  </Accordion>
+  <Accordion title="Does Revenue Sol charge for calls or texts?">
+    No. Usage is billed directly by Twilio or RingCentral at carrier cost. Revenue Sol charges only your monthly subscription.
+  </Accordion>
+  <Accordion title="What happens to my number if I cancel?">
+    The number stays in your own carrier account, so it remains yours. There is nothing to port away from Revenue Sol.
+  </Accordion>
+</AccordionGroup>
+
+If you need help choosing a provider or connecting your number, contact Revenue Sol support at contact@infiniterankers.io. Revenue Sol is a product of Infinite Rankers LLC.
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Connect Twilio" href="/integrations/twilio">
+    Set up a programmable Twilio number to power calls and texts.
+  </Card>
+  <Card title="Connect RingCentral" href="/integrations/ringcentral">
+    Link your existing RingCentral phone system to Revenue Sol.
+  </Card>
+  <Card title="AI receptionist" href="/ai/receptionist">
+    See how the 24/7 AI voice receptionist answers and books jobs.
+  </Card>
+</CardGroup>
